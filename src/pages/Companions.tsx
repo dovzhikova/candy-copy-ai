@@ -125,14 +125,14 @@ const Companions = () => {
           </div>
           
           {/* Filter Tags */}
-          <div className="flex flex-wrap gap-1.5 md:gap-2">
+          <div className="flex flex-wrap gap-2 md:gap-2.5">
             {allTags.map((tag) => (
               <Button
                 key={tag}
                 variant={selectedTags.includes(tag) ? "hero" : "glass"}
                 size="sm"
                 onClick={() => toggleTag(tag)}
-                className="rounded-full text-xs md:text-sm touch-manipulation"
+                className="rounded-full text-xs md:text-sm touch-manipulation font-semibold"
                 aria-pressed={selectedTags.includes(tag)}
               >
                 {tag}

@@ -38,6 +38,11 @@ All colors MUST be HSL.
     --shadow-glow-lg: 0 0 100px rgba(244, 63, 94, 0.4);
     --shadow-card: 0 20px 60px rgba(0, 0, 0, 0.4);
     --shadow-elevated: 0 10px 40px rgba(0, 0, 0, 0.5);
+    --shadow-soft: 0 4px 24px rgba(0, 0, 0, 0.3);
+    --shadow-button: 0 8px 32px rgba(244, 63, 94, 0.4);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     
     --sidebar-background: 220 13% 13%;
     --sidebar-foreground: 220 9% 46%;
@@ -130,6 +135,27 @@ All colors MUST be HSL.
     border: 1px solid rgba(255, 255, 255, 0.15);
   }
   
+  .smooth-transition {
+    transition: var(--transition-smooth);
+  }
+  
+  .bounce-transition {
+    transition: var(--transition-bounce);
+  }
+  
+  .soft-shadow {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .glow-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .glow-hover:hover {
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
+  }
+  
   @keyframes ping {
     75%, 100% {
       transform: scale(2);
@@ -147,6 +173,22 @@ All colors MUST be HSL.
     50% { transform: translateY(-20px); }
   }
   
+  @keyframes subtle-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+  }
+  
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
   .animate-ping {
     animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
@@ -154,5 +196,13 @@ All colors MUST be HSL.
   .animate-float {
     animation: float 6s ease-in-out infinite;
     will-change: transform;
+  }
+  
+  .animate-slide-up {
+    animation: slide-up 0.5s ease-out;
+  }
+  
+  .animate-subtle-pulse {
+    animation: subtle-pulse 3s ease-in-out infinite;
   }
 }

@@ -13,8 +13,9 @@ export const Hero = () => {
   return (
     <div className="min-h-screen relative overflow-hidden flex flex-col" style={{ background: 'var(--gradient-hero)' }}>
       {/* Animated Background Elements - Mobile optimized */}
-      <div className="absolute top-1/4 left-1/4 w-48 h-48 md:w-[40%] md:h-[40%] bg-primary/20 rounded-full blur-[60px] md:blur-[80px] animate-float" style={{ willChange: 'transform' }} />
-      <div className="absolute bottom-1/4 right-1/4 w-40 h-40 md:w-[35%] md:h-[35%] bg-secondary/20 rounded-full blur-[60px] md:blur-[80px] animate-float" style={{ animationDelay: '2s', willChange: 'transform' }} />
+      <div className="absolute top-1/4 left-1/4 w-48 h-48 md:w-[40%] md:h-[40%] bg-primary/20 rounded-full blur-[60px] md:blur-[80px] animate-float opacity-60" style={{ willChange: 'transform' }} />
+      <div className="absolute bottom-1/4 right-1/4 w-40 h-40 md:w-[35%] md:h-[35%] bg-secondary/20 rounded-full blur-[60px] md:blur-[80px] animate-float opacity-60" style={{ animationDelay: '2s', willChange: 'transform' }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] md:w-[600px] md:h-[600px] bg-accent/10 rounded-full blur-3xl animate-subtle-pulse opacity-40" />
       
       {/* Main Content */}
       <div className="relative z-10 flex-1 flex items-center justify-center px-4 sm:px-6">
@@ -38,25 +39,25 @@ export const Hero = () => {
           </p>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center pt-4 px-4">
+          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center pt-4 px-4 animate-slide-up" style={{ animationDelay: '0.2s' }}>
             <Button 
               variant="hero" 
               size="lg"
-              className="text-base md:text-lg px-8 md:px-10 py-6 md:py-7 w-full sm:w-auto shadow-[0_0_40px_rgba(244,63,94,0.4)] hover:shadow-[0_0_60px_rgba(244,63,94,0.6)] transition-all duration-300 touch-manipulation"
+              className="text-base md:text-lg px-8 md:px-10 py-6 md:py-7 w-full sm:w-auto font-semibold group touch-manipulation"
               onClick={() => navigate('/companions')}
               aria-label="Start browsing companions"
             >
-              <Heart className="w-5 h-5" />
+              <Heart className="w-5 h-5 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" />
               Start Matching
             </Button>
             <Button 
               variant="glass" 
               size="lg"
-              className="text-base md:text-lg px-8 md:px-10 py-6 md:py-7 w-full sm:w-auto touch-manipulation"
+              className="text-base md:text-lg px-8 md:px-10 py-6 md:py-7 w-full sm:w-auto group touch-manipulation"
               onClick={scrollToFeatures}
               aria-label="Learn how it works"
             >
-              <Sparkles className="w-5 h-5" />
+              <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-all duration-300" />
               See How It Works
             </Button>
           </div>
@@ -66,8 +67,8 @@ export const Hero = () => {
       {/* Features Section */}
       <div id="features" className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 pb-16 md:pb-24">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
-          <div className="glass-card p-6 md:p-8 rounded-xl md:rounded-2xl space-y-3 md:space-y-4 group hover:shadow-[0_20px_60px_rgba(244,63,94,0.2)] transition-all duration-500">
-            <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+          <div className="glass-card p-6 md:p-8 rounded-xl md:rounded-2xl space-y-3 md:space-y-4 group hover:shadow-[0_20px_60px_rgba(244,63,94,0.3)] transition-all duration-500 glow-hover border-white/10">
+            <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-soft">
               <MessageCircle className="w-6 h-6 md:w-7 md:h-7 text-primary" />
             </div>
             <h3 className="text-lg md:text-xl font-heading font-bold tracking-tight">Meaningful Connections</h3>
@@ -76,8 +77,8 @@ export const Hero = () => {
             </p>
           </div>
           
-          <div className="glass-card p-6 md:p-8 rounded-xl md:rounded-2xl space-y-3 md:space-y-4 group hover:shadow-[0_20px_60px_rgba(244,63,94,0.2)] transition-all duration-500">
-            <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br from-secondary/20 to-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+          <div className="glass-card p-6 md:p-8 rounded-xl md:rounded-2xl space-y-3 md:space-y-4 group hover:shadow-[0_20px_60px_rgba(244,63,94,0.3)] transition-all duration-500 glow-hover border-white/10">
+            <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br from-secondary/20 to-primary/20 flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-soft">
               <Sparkles className="w-6 h-6 md:w-7 md:h-7 text-secondary" />
             </div>
             <h3 className="text-lg md:text-xl font-heading font-bold tracking-tight">Perfect Matches</h3>
@@ -86,8 +87,8 @@ export const Hero = () => {
             </p>
           </div>
           
-          <div className="glass-card p-6 md:p-8 rounded-xl md:rounded-2xl space-y-3 md:space-y-4 group hover:shadow-[0_20px_60px_rgba(244,63,94,0.2)] transition-all duration-500 sm:col-span-2 md:col-span-1">
-            <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br from-accent/20 to-secondary/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+          <div className="glass-card p-6 md:p-8 rounded-xl md:rounded-2xl space-y-3 md:space-y-4 group hover:shadow-[0_20px_60px_rgba(244,63,94,0.3)] transition-all duration-500 glow-hover sm:col-span-2 md:col-span-1 border-white/10">
+            <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br from-accent/20 to-secondary/20 flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-soft">
               <Heart className="w-6 h-6 md:w-7 md:h-7 text-accent" />
             </div>
             <h3 className="text-lg md:text-xl font-heading font-bold tracking-tight">Always Available</h3>

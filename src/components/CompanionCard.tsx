@@ -39,7 +39,7 @@ export const CompanionCard = ({
   return (
     <Card 
       onClick={() => onSelect(id)}
-      className="glass-card overflow-hidden group cursor-pointer hover:shadow-[0_20px_70px_rgba(139,92,246,0.5)] transition-all duration-500 active:scale-[0.98] md:hover:scale-[1.02] border-white/10 relative"
+      className="glass-card overflow-hidden group cursor-pointer transition-all duration-500 active:scale-[0.98] md:hover:scale-[1.02] border-white/10 relative shadow-[0_20px_60px_rgba(0,0,0,0.4)] hover:shadow-[0_30px_90px_rgba(244,63,94,0.5)] animate-slide-up"
     >
       {/* Image Gallery */}
       <div className="relative aspect-[3/4] overflow-hidden">
@@ -88,9 +88,9 @@ export const CompanionCard = ({
         )}
         
         {/* Status Badge */}
-        <div className="absolute top-3 right-3 glass-effect-strong px-2.5 py-1 md:px-3 md:py-1.5 rounded-full flex items-center gap-1.5 backdrop-blur-xl border border-white/20 z-10">
-          <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-accent animate-pulse" />
-          <span className="text-[10px] md:text-xs font-semibold text-white">ONLINE</span>
+        <div className="absolute top-3 right-3 glass-effect-strong px-2.5 py-1 md:px-3 md:py-1.5 rounded-full flex items-center gap-1.5 backdrop-blur-xl border border-white/30 z-10 shadow-soft">
+          <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-accent shadow-[0_0_8px_rgba(251,146,60,0.8)] animate-subtle-pulse" />
+          <span className="text-[10px] md:text-xs font-semibold text-white tracking-wide">ONLINE</span>
         </div>
         
         {/* Info Overlay - Tinder Style with proper spacing for buttons */}
@@ -131,17 +131,17 @@ export const CompanionCard = ({
               e.stopPropagation();
               // Add to favorites functionality
             }}
-            className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center hover:bg-white/20 hover:scale-110 transition-all touch-manipulation group/btn shadow-lg"
+            className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/10 backdrop-blur-xl border border-white/30 flex items-center justify-center hover:bg-white/20 hover:border-white/40 hover:scale-110 active:scale-95 transition-all duration-300 touch-manipulation group/btn shadow-[0_8px_24px_rgba(0,0,0,0.4)] hover:shadow-[0_8px_32px_rgba(244,63,94,0.4)]"
             aria-label="Add to favorites"
           >
-            <i className="fas fa-heart text-lg md:text-xl text-white group-hover/btn:text-red-400 transition-colors"></i>
+            <i className="fas fa-heart text-lg md:text-xl text-white group-hover/btn:text-primary transition-all duration-300"></i>
           </button>
           <button
             onClick={(e) => {
               e.stopPropagation();
               onSelect(id);
             }}
-            className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center hover:scale-110 transition-all shadow-[0_0_30px_rgba(139,92,246,0.5)] hover:shadow-[0_0_50px_rgba(139,92,246,0.7)] touch-manipulation"
+            className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-300 shadow-[0_8px_32px_rgba(244,63,94,0.5)] hover:shadow-[0_12px_48px_rgba(244,63,94,0.7)] touch-manipulation"
             aria-label="Start conversation"
           >
             <i className="fas fa-message text-lg md:text-xl text-white"></i>
