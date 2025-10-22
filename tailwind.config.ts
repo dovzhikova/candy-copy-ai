@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        heading: ['Poppins', 'system-ui', 'sans-serif'],
+        sans: ['DM Sans', 'Inter', 'system-ui', 'sans-serif'],
+        heading: ['Urbanist', 'system-ui', 'sans-serif'],
       },
       spacing: {
         '18': '4.5rem',

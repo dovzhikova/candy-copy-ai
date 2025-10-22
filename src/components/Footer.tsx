@@ -5,19 +5,19 @@ export const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-8 md:mb-12">
           {/* Brand */}
           <div className="space-y-3 md:space-y-4 sm:col-span-2 lg:col-span-1">
-            <h3 className="font-heading text-lg md:text-xl font-bold gradient-text">AI Companion</h3>
+            <h3 className="font-heading text-lg md:text-xl font-bold gradient-text">LoveSync AI 💕</h3>
             <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
-              Your perfect AI chat partner, available 24/7 for meaningful conversations.
+              Where AI meets romance. Connect with companions who truly understand you.
             </p>
           </div>
           
-          {/* Product */}
+          {/* Explore */}
           <div className="space-y-3 md:space-y-4">
-            <h4 className="font-heading text-sm md:text-base font-semibold">Product</h4>
+            <h4 className="font-heading text-sm md:text-base font-semibold">Explore</h4>
             <ul className="space-y-2 md:space-y-3 text-xs md:text-sm">
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Features</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Companions</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Pricing</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Browse Matches</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">How It Works</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Success Stories</a></li>
             </ul>
           </div>
           
@@ -31,13 +31,13 @@ export const Footer = () => {
             </ul>
           </div>
           
-          {/* Support */}
+          {/* Connect */}
           <div className="space-y-3 md:space-y-4">
-            <h4 className="font-heading text-sm md:text-base font-semibold">Support</h4>
+            <h4 className="font-heading text-sm md:text-base font-semibold">Connect</h4>
             <ul className="space-y-2 md:space-y-3 text-xs md:text-sm">
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Help Center</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Contact Us</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">FAQs</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Dating Tips</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Community</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Blog</a></li>
             </ul>
           </div>
         </div>
@@ -45,7 +45,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-6 md:pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs md:text-sm text-muted-foreground text-center md:text-left">
-            © 2025 AI Companion. All rights reserved.
+            © 2025 LoveSync AI. Made with 💕 for meaningful connections.
           </p>
           
           <div className="flex gap-4 md:gap-6">

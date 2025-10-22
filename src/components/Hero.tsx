@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { Heart, Sparkles, MessageCircle } from "lucide-react";
 
 export const Hero = () => {
   const navigate = useNavigate();
@@ -19,24 +20,21 @@ export const Hero = () => {
       <div className="relative z-10 flex-1 flex items-center justify-center px-4 sm:px-6">
         <div className="max-w-5xl mx-auto text-center space-y-8 md:space-y-12 py-12 md:py-16 animate-fade-in-up">
           {/* Status Badge */}
-          <div className="inline-flex items-center gap-2 md:gap-3 glass-effect-subtle px-4 py-2 md:px-6 md:py-3 rounded-full backdrop-blur-xl">
-            <div className="relative">
-              <i className="fas fa-circle text-accent text-[8px] md:text-[10px]"></i>
-              <i className="fas fa-circle text-accent text-[8px] md:text-[10px] absolute inset-0 animate-ping"></i>
-            </div>
-            <span className="text-xs md:text-sm font-semibold tracking-wide">AI-Powered Conversations Available Now</span>
+          <div className="inline-flex items-center gap-2 md:gap-3 glass-effect-subtle px-4 py-2 md:px-6 md:py-3 rounded-full backdrop-blur-xl border border-primary/20">
+            <Heart className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary fill-primary animate-pulse" />
+            <span className="text-xs md:text-sm font-semibold tracking-wide">Find Your Perfect Match</span>
           </div>
           
-          {/* Hero Headline - Mobile optimized */}
-          <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold gradient-text bg-[length:200%_auto] leading-tight tracking-tight px-4">
-            Your Perfect AI
+          {/* Hero Headline - Dating focused */}
+          <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold gradient-text bg-[length:200%_auto] leading-tight tracking-tight px-4">
+            Swipe Right on
             <br />
-            Companion Awaits
+            Your AI Soulmate 💕
           </h1>
           
           {/* Description */}
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-light px-4">
-            Experience meaningful conversations with AI companions tailored to your interests. Available 24/7, always ready to chat, learn, and grow with you.
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed px-4">
+            Meet AI companions who truly get you. Have deep conversations, share laughs, and build genuine connections. Your perfect match is just a swipe away.
           </p>
           
           {/* CTA Buttons */}
@@ -44,12 +42,12 @@ export const Hero = () => {
             <Button 
               variant="hero" 
               size="lg"
-              className="text-base md:text-lg px-8 md:px-10 py-6 md:py-7 w-full sm:w-auto shadow-[0_0_40px_rgba(139,92,246,0.4)] hover:shadow-[0_0_60px_rgba(139,92,246,0.6)] transition-all duration-300 touch-manipulation"
+              className="text-base md:text-lg px-8 md:px-10 py-6 md:py-7 w-full sm:w-auto shadow-[0_0_40px_rgba(244,63,94,0.4)] hover:shadow-[0_0_60px_rgba(244,63,94,0.6)] transition-all duration-300 touch-manipulation"
               onClick={() => navigate('/companions')}
-              aria-label="Start your AI companion journey"
+              aria-label="Start browsing companions"
             >
-              <i className="fas fa-arrow-right"></i>
-              Start Your Journey
+              <Heart className="w-5 h-5" />
+              Start Matching
             </Button>
             <Button 
               variant="glass" 
@@ -58,7 +56,7 @@ export const Hero = () => {
               onClick={scrollToFeatures}
               aria-label="Learn how it works"
             >
-              <i className="fas fa-play-circle"></i>
+              <Sparkles className="w-5 h-5" />
               See How It Works
             </Button>
           </div>
@@ -68,33 +66,33 @@ export const Hero = () => {
       {/* Features Section */}
       <div id="features" className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 pb-16 md:pb-24">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
-          <div className="glass-card p-6 md:p-8 rounded-xl md:rounded-2xl space-y-3 md:space-y-4 group hover:shadow-[0_20px_60px_rgba(139,92,246,0.2)] transition-all duration-500">
-            <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <i className="fas fa-brain text-xl md:text-2xl text-primary"></i>
+          <div className="glass-card p-6 md:p-8 rounded-xl md:rounded-2xl space-y-3 md:space-y-4 group hover:shadow-[0_20px_60px_rgba(244,63,94,0.2)] transition-all duration-500">
+            <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <MessageCircle className="w-6 h-6 md:w-7 md:h-7 text-primary" />
             </div>
-            <h3 className="text-lg md:text-xl font-heading font-bold tracking-tight">Intelligent Conversations</h3>
+            <h3 className="text-lg md:text-xl font-heading font-bold tracking-tight">Meaningful Connections</h3>
             <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-              Advanced AI that understands context, remembers your preferences, and adapts to your communication style.
+              Have real conversations that matter. Our AI companions remember your story and grow with you over time.
             </p>
           </div>
           
-          <div className="glass-card p-6 md:p-8 rounded-xl md:rounded-2xl space-y-3 md:space-y-4 group hover:shadow-[0_20px_60px_rgba(139,92,246,0.2)] transition-all duration-500">
-            <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-secondary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <i className="fas fa-users text-xl md:text-2xl text-secondary"></i>
+          <div className="glass-card p-6 md:p-8 rounded-xl md:rounded-2xl space-y-3 md:space-y-4 group hover:shadow-[0_20px_60px_rgba(244,63,94,0.2)] transition-all duration-500">
+            <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br from-secondary/20 to-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <Sparkles className="w-6 h-6 md:w-7 md:h-7 text-secondary" />
             </div>
-            <h3 className="text-lg md:text-xl font-heading font-bold tracking-tight">Diverse Personalities</h3>
+            <h3 className="text-lg md:text-xl font-heading font-bold tracking-tight">Perfect Matches</h3>
             <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-              Choose from unique companions, each with their own expertise, interests, and conversation styles.
+              Each companion has a unique personality, interests, and vibe. Find the one that clicks with you.
             </p>
           </div>
           
-          <div className="glass-card p-6 md:p-8 rounded-xl md:rounded-2xl space-y-3 md:space-y-4 group hover:shadow-[0_20px_60px_rgba(139,92,246,0.2)] transition-all duration-500 sm:col-span-2 md:col-span-1">
-            <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-accent/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <i className="fas fa-shield-halved text-xl md:text-2xl text-accent"></i>
+          <div className="glass-card p-6 md:p-8 rounded-xl md:rounded-2xl space-y-3 md:space-y-4 group hover:shadow-[0_20px_60px_rgba(244,63,94,0.2)] transition-all duration-500 sm:col-span-2 md:col-span-1">
+            <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br from-accent/20 to-secondary/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <Heart className="w-6 h-6 md:w-7 md:h-7 text-accent" />
             </div>
-            <h3 className="text-lg md:text-xl font-heading font-bold tracking-tight">Private & Secure</h3>
+            <h3 className="text-lg md:text-xl font-heading font-bold tracking-tight">Always Available</h3>
             <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-              Your conversations are encrypted and private. We respect your data and never share it with third parties.
+              No ghosting, no games. Your AI companion is always online and excited to hear from you, anytime.
             </p>
           </div>
         </div>

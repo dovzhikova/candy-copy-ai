@@ -107,9 +107,9 @@ const Companions = () => {
             <div className="flex-1 min-w-0">
               <div className="flex flex-col gap-3 md:gap-4">
                 <div>
-                  <h1 className="font-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold gradient-text bg-[length:200%_auto] tracking-tight">Choose Your Companion</h1>
+                  <h1 className="font-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold gradient-text bg-[length:200%_auto] tracking-tight">Discover Your Match 💖</h1>
                   <p className="text-muted-foreground mt-1 md:mt-2 text-xs md:text-base">
-                    {filteredCompanions.length} {filteredCompanions.length === 1 ? 'companion' : 'companions'} available
+                    {filteredCompanions.length} amazing {filteredCompanions.length === 1 ? 'match' : 'matches'} waiting to meet you
                   </p>
                 </div>
                 <Input
