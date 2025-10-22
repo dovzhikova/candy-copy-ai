@@ -1,6 +1,5 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Sparkles } from "lucide-react";
 
 interface CompanionCardProps {
   id: string;
@@ -31,10 +30,13 @@ export const CompanionCard = ({
         />
         <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent opacity-90" />
         
-        {/* Floating Badge */}
-        <div className="absolute top-4 right-4 glass-card px-3 py-1 rounded-full flex items-center gap-1">
-          <Sparkles className="w-3 h-3 text-primary" />
-          <span className="text-xs font-medium">AI</span>
+        {/* Status Indicator */}
+        <div className="absolute top-4 right-4 glass-card px-3 py-1.5 rounded-full flex items-center gap-2">
+          <div className="relative">
+            <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+            <div className="absolute inset-0 w-1.5 h-1.5 rounded-full bg-primary animate-ping" />
+          </div>
+          <span className="text-xs font-semibold tracking-wider">ACTIVE</span>
         </div>
       </div>
       
@@ -59,11 +61,12 @@ export const CompanionCard = ({
         
         <Button 
           variant="hero" 
-          className="w-full"
+          className="w-full group relative overflow-hidden"
           onClick={() => onSelect(id)}
         >
-          <MessageCircle className="w-4 h-4" />
-          Start Chat
+          <span className="relative z-10">Connect Now</span>
+          <div className="absolute right-4 top-1/2 -translate-y-1/2 w-6 h-0.5 bg-white/50 group-hover:w-8 transition-all duration-300" />
+          <div className="absolute right-4 top-1/2 -translate-y-1/2 translate-x-1 w-0 h-0 border-l-[6px] border-l-white/50 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent group-hover:translate-x-2 transition-all duration-300" />
         </Button>
       </div>
     </Card>

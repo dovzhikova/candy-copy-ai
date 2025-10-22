@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Sparkles, MessageCircle, Zap } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 export const Hero = () => {
@@ -17,8 +16,8 @@ export const Hero = () => {
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 text-center">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8 animate-fade-in">
-          <Sparkles className="w-4 h-4 text-primary" />
-          <span className="text-sm font-medium">AI-Powered Conversations</span>
+          <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+          <span className="text-sm font-medium tracking-wide">AI-Powered Conversations</span>
         </div>
         
         <h1 className="text-6xl md:text-8xl font-bold mb-6 animate-fade-in-up">
@@ -34,10 +33,10 @@ export const Hero = () => {
           <Button 
             variant="hero" 
             size="lg"
-            className="text-lg px-8 py-6 h-auto"
+            className="text-lg px-8 py-6 h-auto group"
             onClick={() => navigate('/companions')}
           >
-            <MessageCircle className="w-5 h-5" />
+            <div className="w-2 h-2 rounded-full bg-white mr-2 group-hover:scale-125 transition-transform" />
             Start Chatting
           </Button>
           <Button 
@@ -45,7 +44,6 @@ export const Hero = () => {
             size="lg"
             className="text-lg px-8 py-6 h-auto"
           >
-            <Zap className="w-5 h-5" />
             Learn More
           </Button>
         </div>

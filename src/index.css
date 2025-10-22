@@ -91,6 +91,17 @@ All colors MUST be HSL.
   }
   
   .glass-card {
-    @apply backdrop-blur-xl bg-card/40 border border-white/10;
+    @apply backdrop-blur-xl bg-card/50 border border-white/10 shadow-lg;
+  }
+  
+  @keyframes ping {
+    75%, 100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+  
+  .animate-ping {
+    animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
 }

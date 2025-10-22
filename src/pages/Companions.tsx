@@ -1,6 +1,5 @@
 import { CompanionCard } from "@/components/CompanionCard";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const companions = [
@@ -54,8 +53,12 @@ const Companions = () => {
             variant="ghost" 
             size="icon"
             onClick={() => navigate('/')}
+            className="group"
           >
-            <ArrowLeft className="w-5 h-5" />
+            <div className="flex items-center justify-center">
+              <div className="w-5 h-0.5 bg-foreground group-hover:w-6 transition-all" />
+              <div className="w-0 h-0 border-r-[5px] border-r-foreground border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent -ml-1" />
+            </div>
           </Button>
           <div>
             <h1 className="text-3xl font-bold gradient-text">Choose Your Companion</h1>

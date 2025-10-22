@@ -2,7 +2,6 @@ import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
-import { Send, ArrowLeft, Sparkles } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 interface Message {
@@ -84,8 +83,12 @@ export const ChatInterface = ({ companionName, companionImage }: ChatInterfacePr
             variant="ghost" 
             size="icon"
             onClick={() => navigate('/companions')}
+            className="group"
           >
-            <ArrowLeft className="w-5 h-5" />
+            <div className="flex items-center justify-center">
+              <div className="w-5 h-0.5 bg-foreground group-hover:w-6 transition-all" />
+              <div className="w-0 h-0 border-r-[5px] border-r-foreground border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent -ml-1" />
+            </div>
           </Button>
           
           <div className="flex items-center gap-3 flex-1">
@@ -100,9 +103,13 @@ export const ChatInterface = ({ companionName, companionImage }: ChatInterfacePr
             
             <div>
               <h2 className="font-bold text-lg">{companionName}</h2>
-              <div className="flex items-center gap-1 text-xs text-muted-foreground">
-                <Sparkles className="w-3 h-3 text-primary" />
-                <span>AI Companion • Online</span>
+              <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                <div className="flex items-center gap-1">
+                  <div className="w-1.5 h-1.5 rounded-full bg-green-500" />
+                  <span className="font-medium">Active</span>
+                </div>
+                <span>•</span>
+                <span>AI Companion</span>
               </div>
             </div>
           </div>
@@ -173,8 +180,12 @@ export const ChatInterface = ({ companionName, companionImage }: ChatInterfacePr
             size="icon"
             onClick={handleSend}
             disabled={!input.trim()}
+            className="group relative"
           >
-            <Send className="w-5 h-5" />
+            <div className="flex items-center justify-center rotate-45">
+              <div className="w-4 h-0.5 bg-white group-hover:w-5 transition-all" />
+              <div className="w-0 h-0 border-l-[4px] border-l-white border-t-[3px] border-t-transparent border-b-[3px] border-b-transparent -ml-0.5" />
+            </div>
           </Button>
         </div>
       </div>
