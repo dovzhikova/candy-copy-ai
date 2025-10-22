@@ -72,23 +72,23 @@ const Companions = () => {
   return (
     <div className="min-h-screen relative" style={{ background: 'var(--gradient-hero)' }}>
       {/* Header */}
-      <div className="glass-effect border-b border-white/10 px-6 py-6 sticky top-0 z-10 backdrop-blur-xl">
-        <div className="max-w-7xl mx-auto space-y-6">
-          <div className="flex items-center gap-6">
+      <div className="glass-effect border-b border-white/10 px-4 sm:px-6 py-4 md:py-6 sticky top-0 z-10 backdrop-blur-xl">
+        <div className="max-w-7xl mx-auto space-y-4 md:space-y-6">
+          <div className="flex items-center gap-3 md:gap-6">
             <Button 
               variant="ghost" 
               size="icon"
-              className="hover:bg-white/10"
+              className="hover:bg-white/10 shrink-0 touch-manipulation"
               onClick={() => navigate('/')}
               aria-label="Back to home"
             >
-              <i className="fas fa-arrow-left text-xl"></i>
+              <i className="fas fa-arrow-left text-lg md:text-xl"></i>
             </Button>
-            <div className="flex-1">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div className="flex-1 min-w-0">
+              <div className="flex flex-col gap-3 md:gap-4">
                 <div>
-                  <h1 className="font-heading text-3xl md:text-4xl font-bold gradient-text bg-[length:200%_auto] tracking-tight">Choose Your Companion</h1>
-                  <p className="text-muted-foreground mt-2 text-base">
+                  <h1 className="font-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold gradient-text bg-[length:200%_auto] tracking-tight">Choose Your Companion</h1>
+                  <p className="text-muted-foreground mt-1 md:mt-2 text-xs md:text-base">
                     {filteredCompanions.length} {filteredCompanions.length === 1 ? 'companion' : 'companions'} available
                   </p>
                 </div>
@@ -97,7 +97,7 @@ const Companions = () => {
                   placeholder="Search companions..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="glass-effect border-white/20 w-full md:w-80"
+                  className="glass-effect border-white/20 w-full text-sm md:text-base"
                   aria-label="Search companions"
                 />
               </div>
@@ -105,14 +105,14 @@ const Companions = () => {
           </div>
           
           {/* Filter Tags */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-1.5 md:gap-2">
             {allTags.map((tag) => (
               <Button
                 key={tag}
                 variant={selectedTags.includes(tag) ? "hero" : "glass"}
                 size="sm"
                 onClick={() => toggleTag(tag)}
-                className="rounded-full"
+                className="rounded-full text-xs md:text-sm touch-manipulation"
                 aria-pressed={selectedTags.includes(tag)}
               >
                 {tag}
@@ -123,9 +123,9 @@ const Companions = () => {
                 variant="ghost"
                 size="sm"
                 onClick={() => setSelectedTags([])}
-                className="rounded-full hover:bg-white/10"
+                className="rounded-full hover:bg-white/10 text-xs md:text-sm touch-manipulation"
               >
-                <i className="fas fa-times mr-2"></i>
+                <i className="fas fa-times mr-1.5 md:mr-2"></i>
                 Clear filters
               </Button>
             )}
@@ -134,9 +134,9 @@ const Companions = () => {
       </div>
 
       {/* Companions Grid */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 md:py-16">
         {filteredCompanions.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             {filteredCompanions.map((companion) => (
               <CompanionCard
                 key={companion.id}
@@ -146,12 +146,12 @@ const Companions = () => {
             ))}
           </div>
         ) : (
-          <div className="text-center py-24">
-            <div className="w-20 h-20 rounded-full bg-muted/20 flex items-center justify-center mx-auto mb-6">
-              <i className="fas fa-search text-3xl text-muted-foreground"></i>
+          <div className="text-center py-16 md:py-24 px-4">
+            <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-muted/20 flex items-center justify-center mx-auto mb-4 md:mb-6">
+              <i className="fas fa-search text-2xl md:text-3xl text-muted-foreground"></i>
             </div>
-            <h3 className="font-heading text-2xl font-bold mb-3">No companions found</h3>
-            <p className="text-muted-foreground max-w-md mx-auto mb-6">
+            <h3 className="font-heading text-xl md:text-2xl font-bold mb-2 md:mb-3">No companions found</h3>
+            <p className="text-sm md:text-base text-muted-foreground max-w-md mx-auto mb-4 md:mb-6">
               Try adjusting your search or filters to find the perfect companion.
             </p>
             <Button
@@ -160,6 +160,7 @@ const Companions = () => {
                 setSearchQuery('');
                 setSelectedTags([]);
               }}
+              className="touch-manipulation"
             >
               Clear all filters
             </Button>

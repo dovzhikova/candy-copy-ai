@@ -87,6 +87,13 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Safe area insets for mobile devices */
+  .safe-area-inset-bottom {
+    padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
   }
   
   .gradient-text {
