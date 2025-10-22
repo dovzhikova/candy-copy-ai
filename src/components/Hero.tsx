@@ -25,7 +25,7 @@ export const Hero = () => {
           </div>
           
           {/* Main heading */}
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-[1.1] tracking-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
             Your Perfect
             <br />
             <span className="gradient-text bg-[length:200%_auto]">AI Companion</span>
