@@ -50,29 +50,29 @@ export const CompanionCard = ({
           loading="lazy"
         />
         
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent" />
+        {/* Gradient Overlay - Extended for better readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" style={{ backgroundImage: 'linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0) 70%)' }} />
         
         {/* Image Navigation */}
         {images.length > 1 && (
           <>
             <button
               onClick={prevImage}
-              className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center hover:bg-black/50 transition-colors opacity-0 group-hover:opacity-100 touch-manipulation"
+              className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center hover:bg-black/70 transition-colors opacity-0 group-hover:opacity-100 touch-manipulation z-20"
               aria-label="Previous photo"
             >
               <ChevronLeft className="w-5 h-5 text-white" />
             </button>
             <button
               onClick={nextImage}
-              className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center hover:bg-black/50 transition-colors opacity-0 group-hover:opacity-100 touch-manipulation"
+              className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center hover:bg-black/70 transition-colors opacity-0 group-hover:opacity-100 touch-manipulation z-20"
               aria-label="Next photo"
             >
               <ChevronRight className="w-5 h-5 text-white" />
             </button>
             
             {/* Photo Indicators */}
-            <div className="absolute top-3 left-0 right-0 flex justify-center gap-1 px-4">
+            <div className="absolute top-3 left-0 right-0 flex justify-center gap-1 px-4 z-10">
               {images.map((_, index) => (
                 <div
                   key={index}
@@ -88,27 +88,27 @@ export const CompanionCard = ({
         )}
         
         {/* Status Badge */}
-        <div className="absolute top-3 right-3 glass-effect-strong px-2.5 py-1 md:px-3 md:py-1.5 rounded-full flex items-center gap-1.5 backdrop-blur-xl border border-white/20">
+        <div className="absolute top-3 right-3 glass-effect-strong px-2.5 py-1 md:px-3 md:py-1.5 rounded-full flex items-center gap-1.5 backdrop-blur-xl border border-white/20 z-10">
           <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-accent animate-pulse" />
           <span className="text-[10px] md:text-xs font-semibold text-white">ONLINE</span>
         </div>
         
-        {/* Info Overlay - Tinder Style */}
-        <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 space-y-2">
-          <div className="flex items-end gap-2">
-            <h3 className="font-heading text-2xl md:text-3xl font-bold text-white tracking-tight drop-shadow-lg">
+        {/* Info Overlay - Tinder Style with proper spacing for buttons */}
+        <div className="absolute bottom-0 left-0 right-0 pb-20 md:pb-24 pt-12 px-4 md:px-6 space-y-1.5 md:space-y-2 z-10 pointer-events-none">
+          <div className="flex items-end gap-2 flex-wrap">
+            <h3 className="font-heading text-2xl md:text-3xl font-bold text-white tracking-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
               {name}
             </h3>
-            <span className="text-xl md:text-2xl text-white/90 font-light pb-0.5">{age}</span>
-            <Verified className="w-5 h-5 md:w-6 md:h-6 text-primary fill-primary mb-1" />
+            <span className="text-xl md:text-2xl text-white/90 font-light pb-0.5 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">{age}</span>
+            <Verified className="w-5 h-5 md:w-6 md:h-6 text-primary fill-primary mb-1 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]" />
           </div>
           
-          <div className="flex items-center gap-2 text-white/90">
+          <div className="flex items-center gap-2 text-white/90 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
             <MapPin className="w-3.5 h-3.5 md:w-4 md:h-4" />
             <span className="text-xs md:text-sm font-medium">{title}</span>
           </div>
           
-          <p className="text-xs md:text-sm text-white/80 line-clamp-2 leading-relaxed">
+          <p className="text-xs md:text-sm text-white/80 line-clamp-2 leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] pr-4">
             {description}
           </p>
           
@@ -116,37 +116,37 @@ export const CompanionCard = ({
             {tags.slice(0, 3).map((tag) => (
               <span 
                 key={tag}
-                className="px-2.5 py-1 md:px-3 md:py-1 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-[10px] md:text-xs font-semibold text-white"
+                className="px-2.5 py-1 md:px-3 md:py-1 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-[10px] md:text-xs font-semibold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
               >
                 {tag}
               </span>
             ))}
           </div>
         </div>
-      </div>
-      
-      {/* Action Buttons */}
-      <div className="absolute bottom-4 right-4 flex gap-2 md:gap-3">
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            // Add to favorites functionality
-          }}
-          className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center hover:bg-white/20 hover:scale-110 transition-all touch-manipulation group/btn"
-          aria-label="Add to favorites"
-        >
-          <i className="fas fa-heart text-lg md:text-xl text-white group-hover/btn:text-red-400 transition-colors"></i>
-        </button>
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            onSelect(id);
-          }}
-          className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center hover:scale-110 transition-all shadow-[0_0_30px_rgba(139,92,246,0.5)] hover:shadow-[0_0_50px_rgba(139,92,246,0.7)] touch-manipulation"
-          aria-label="Start conversation"
-        >
-          <i className="fas fa-message text-lg md:text-xl text-white"></i>
-        </button>
+        
+        {/* Action Buttons - Fixed positioning to avoid overlap */}
+        <div className="absolute bottom-3 md:bottom-4 right-3 md:right-4 flex gap-2 md:gap-3 z-20 pointer-events-auto">
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              // Add to favorites functionality
+            }}
+            className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center hover:bg-white/20 hover:scale-110 transition-all touch-manipulation group/btn shadow-lg"
+            aria-label="Add to favorites"
+          >
+            <i className="fas fa-heart text-lg md:text-xl text-white group-hover/btn:text-red-400 transition-colors"></i>
+          </button>
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              onSelect(id);
+            }}
+            className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center hover:scale-110 transition-all shadow-[0_0_30px_rgba(139,92,246,0.5)] hover:shadow-[0_0_50px_rgba(139,92,246,0.7)] touch-manipulation"
+            aria-label="Start conversation"
+          >
+            <i className="fas fa-message text-lg md:text-xl text-white"></i>
+          </button>
+        </div>
       </div>
     </Card>
   );
