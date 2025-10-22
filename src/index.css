@@ -8,42 +8,45 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 240 10% 8%;
-    --foreground: 0 0% 98%;
+    --background: 222 47% 4%;
+    --foreground: 210 40% 98%;
 
-    --card: 240 8% 12%;
-    --card-foreground: 0 0% 98%;
+    --card: 222 35% 8%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 240 8% 12%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 222 35% 8%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 271 91% 65%;
+    --primary: 263 70% 60%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 331 77% 62%;
+    --secondary: 280 60% 55%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 240 5% 26%;
-    --muted-foreground: 240 5% 65%;
+    --muted: 217 19% 27%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 217 91% 60%;
+    --accent: 210 100% 58%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 6% 20%;
-    --input: 240 6% 20%;
-    --ring: 271 91% 65%;
+    --border: 217 19% 15%;
+    --input: 217 19% 18%;
+    --ring: 263 70% 60%;
 
-    --radius: 1rem;
+    --radius: 0.75rem;
     
-    --gradient-primary: linear-gradient(135deg, hsl(271 91% 65%), hsl(331 77% 62%));
-    --gradient-accent: linear-gradient(135deg, hsl(217 91% 60%), hsl(271 91% 65%));
-    --gradient-hero: linear-gradient(180deg, hsl(240 10% 8%) 0%, hsl(271 91% 15%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(263 70% 60%) 0%, hsl(280 60% 55%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(210 100% 58%) 0%, hsl(263 70% 60%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(222 47% 4%) 0%, hsl(263 70% 12%) 50%, hsl(222 47% 4%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(222 35% 8% / 0.5) 0%, hsl(263 70% 12% / 0.3) 100%);
     
-    --shadow-glow: 0 0 40px hsl(271 91% 65% / 0.3);
-    --shadow-card: 0 8px 32px hsl(271 91% 10% / 0.4);
+    --shadow-glow: 0 0 60px hsl(263 70% 60% / 0.25);
+    --shadow-glow-lg: 0 0 100px hsl(263 70% 60% / 0.3);
+    --shadow-card: 0 10px 40px hsl(222 47% 4% / 0.6);
+    --shadow-elevated: 0 20px 60px hsl(222 47% 4% / 0.8);
 
     --sidebar-background: 0 0% 98%;
 
@@ -88,10 +91,15 @@ All colors MUST be HSL.
   
   .gradient-text {
     @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
+    animation: gradient-shift 8s ease infinite;
   }
   
   .glass-card {
-    @apply backdrop-blur-xl bg-card/50 border border-white/10 shadow-lg;
+    @apply backdrop-blur-2xl bg-gradient-to-br from-card/80 to-card/40 border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)];
+  }
+  
+  .glass-effect {
+    @apply backdrop-blur-xl bg-white/5 border border-white/10;
   }
   
   @keyframes ping {
@@ -101,7 +109,21 @@ All colors MUST be HSL.
     }
   }
   
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
   .animate-ping {
     animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
   }
 }

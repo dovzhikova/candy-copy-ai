@@ -75,37 +75,41 @@ export const ChatInterface = ({ companionName, companionImage }: ChatInterfacePr
   };
 
   return (
-    <div className="flex flex-col h-screen bg-background">
+    <div className="flex flex-col h-screen" style={{ background: 'var(--gradient-hero)' }}>
       {/* Header */}
-      <div className="glass-card border-b border-white/10 px-6 py-4">
-        <div className="flex items-center gap-4 max-w-6xl mx-auto">
+      <div className="glass-effect border-b border-white/10 px-6 py-5 backdrop-blur-xl">
+        <div className="flex items-center gap-4 max-w-5xl mx-auto">
           <Button 
             variant="ghost" 
             size="icon"
+            className="hover:bg-white/10"
             onClick={() => navigate('/companions')}
           >
-            <i className="fas fa-arrow-left"></i>
+            <i className="fas fa-arrow-left text-lg"></i>
           </Button>
           
-          <div className="flex items-center gap-3 flex-1">
+          <div className="flex items-center gap-4 flex-1">
             <div className="relative">
               <img 
                 src={companionImage} 
                 alt={companionName}
-                className="w-12 h-12 rounded-full object-cover border-2 border-primary"
+                className="w-14 h-14 rounded-full object-cover border-2 border-accent shadow-[0_0_20px_rgba(139,92,246,0.4)]"
               />
-              <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-background" />
+              <div className="absolute -bottom-0.5 -right-0.5 w-4 h-4 bg-accent rounded-full border-2 border-background animate-pulse" />
             </div>
             
             <div>
-              <h2 className="font-bold text-lg">{companionName}</h2>
-              <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                <div className="flex items-center gap-1">
-                  <i className="fas fa-circle text-green-500 text-[6px]"></i>
-                  <span className="font-medium">Active</span>
+              <h2 className="font-bold text-lg tracking-tight">{companionName}</h2>
+              <div className="flex items-center gap-2.5 text-xs text-muted-foreground">
+                <div className="flex items-center gap-1.5">
+                  <i className="fas fa-circle text-accent text-[6px] animate-pulse"></i>
+                  <span className="font-semibold">Active now</span>
                 </div>
-                <span>•</span>
-                <span><i className="fas fa-robot mr-1"></i>AI Companion</span>
+                <span className="text-border">•</span>
+                <span className="flex items-center gap-1.5">
+                  <i className="fas fa-microchip"></i>
+                  AI Companion
+                </span>
               </div>
             </div>
           </div>
@@ -113,45 +117,45 @@ export const ChatInterface = ({ companionName, companionImage }: ChatInterfacePr
       </div>
 
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto px-6 py-8">
-        <div className="max-w-4xl mx-auto space-y-6">
+      <div className="flex-1 overflow-y-auto px-6 py-10">
+        <div className="max-w-4xl mx-auto space-y-8">
           {messages.map((message) => (
             <div
               key={message.id}
-              className={`flex gap-3 ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
+              className={`flex gap-4 ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
             >
               {message.role === 'assistant' && (
                 <img 
                   src={companionImage} 
                   alt={companionName}
-                  className="w-10 h-10 rounded-full object-cover flex-shrink-0"
+                  className="w-11 h-11 rounded-full object-cover flex-shrink-0 border-2 border-accent/30 shadow-lg"
                 />
               )}
               
               <Card
-                className={`max-w-[70%] p-4 ${
+                className={`max-w-[70%] p-5 shadow-lg ${
                   message.role === 'user'
-                    ? 'bg-gradient-to-r from-primary to-secondary text-white'
-                    : 'glass-card'
+                    ? 'bg-gradient-to-r from-primary via-secondary to-accent text-white border-0'
+                    : 'glass-effect border-white/10'
                 }`}
               >
-                <p className="text-sm leading-relaxed">{message.content}</p>
+                <p className="text-[15px] leading-relaxed">{message.content}</p>
               </Card>
             </div>
           ))}
           
           {isTyping && (
-            <div className="flex gap-3 justify-start">
+            <div className="flex gap-4 justify-start">
               <img 
                 src={companionImage} 
                 alt={companionName}
-                className="w-10 h-10 rounded-full object-cover flex-shrink-0"
+                className="w-11 h-11 rounded-full object-cover flex-shrink-0 border-2 border-accent/30 shadow-lg"
               />
-              <Card className="glass-card p-4">
-                <div className="flex gap-1">
-                  <div className="w-2 h-2 bg-primary rounded-full animate-bounce" />
-                  <div className="w-2 h-2 bg-primary rounded-full animate-bounce delay-100" />
-                  <div className="w-2 h-2 bg-primary rounded-full animate-bounce delay-200" />
+              <Card className="glass-effect p-5 border-white/10">
+                <div className="flex gap-1.5">
+                  <div className="w-2.5 h-2.5 bg-accent rounded-full animate-bounce" />
+                  <div className="w-2.5 h-2.5 bg-accent rounded-full animate-bounce" style={{ animationDelay: '0.1s' }} />
+                  <div className="w-2.5 h-2.5 bg-accent rounded-full animate-bounce" style={{ animationDelay: '0.2s' }} />
                 </div>
               </Card>
             </div>
@@ -162,22 +166,23 @@ export const ChatInterface = ({ companionName, companionImage }: ChatInterfacePr
       </div>
 
       {/* Input */}
-      <div className="glass-card border-t border-white/10 px-6 py-4">
-        <div className="max-w-4xl mx-auto flex gap-3">
+      <div className="glass-effect border-t border-white/10 px-6 py-5 backdrop-blur-xl">
+        <div className="max-w-4xl mx-auto flex gap-4">
           <Input
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && handleSend()}
             placeholder="Type your message..."
-            className="flex-1 bg-muted/50 border-white/10"
+            className="flex-1 h-12 bg-white/5 border-white/10 focus:border-accent/50 transition-colors px-5 text-base placeholder:text-muted-foreground/60"
           />
           <Button 
             variant="hero"
             size="icon"
+            className="h-12 w-12 shadow-[0_0_30px_rgba(139,92,246,0.3)] hover:shadow-[0_0_50px_rgba(139,92,246,0.5)]"
             onClick={handleSend}
             disabled={!input.trim()}
           >
-            <i className="fas fa-paper-plane"></i>
+            <i className="fas fa-paper-plane text-base"></i>
           </Button>
         </div>
       </div>

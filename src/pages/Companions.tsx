@@ -45,27 +45,28 @@ const Companions = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen relative" style={{ background: 'var(--gradient-hero)' }}>
       {/* Header */}
-      <div className="glass-card border-b border-white/10 px-6 py-6 sticky top-0 z-10">
-        <div className="max-w-7xl mx-auto flex items-center gap-4">
+      <div className="glass-effect border-b border-white/10 px-6 py-6 sticky top-0 z-10 backdrop-blur-xl">
+        <div className="max-w-7xl mx-auto flex items-center gap-6">
           <Button 
             variant="ghost" 
             size="icon"
+            className="hover:bg-white/10"
             onClick={() => navigate('/')}
           >
-            <i className="fas fa-arrow-left"></i>
+            <i className="fas fa-arrow-left text-xl"></i>
           </Button>
           <div>
-            <h1 className="text-3xl font-bold gradient-text">Choose Your Companion</h1>
-            <p className="text-muted-foreground mt-1">Select an AI companion to start your conversation</p>
+            <h1 className="text-4xl md:text-5xl font-bold gradient-text bg-[length:200%_auto] tracking-tight">Choose Your Companion</h1>
+            <p className="text-muted-foreground mt-3 text-lg font-light">Select an AI companion and begin your journey</p>
           </div>
         </div>
       </div>
 
       {/* Companions Grid */}
-      <div className="max-w-7xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {companions.map((companion) => (
             <CompanionCard
               key={companion.id}
