@@ -83,12 +83,8 @@ export const ChatInterface = ({ companionName, companionImage }: ChatInterfacePr
             variant="ghost" 
             size="icon"
             onClick={() => navigate('/companions')}
-            className="group"
           >
-            <div className="flex items-center justify-center">
-              <div className="w-5 h-0.5 bg-foreground group-hover:w-6 transition-all" />
-              <div className="w-0 h-0 border-r-[5px] border-r-foreground border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent -ml-1" />
-            </div>
+            <i className="fas fa-arrow-left"></i>
           </Button>
           
           <div className="flex items-center gap-3 flex-1">
@@ -105,11 +101,11 @@ export const ChatInterface = ({ companionName, companionImage }: ChatInterfacePr
               <h2 className="font-bold text-lg">{companionName}</h2>
               <div className="flex items-center gap-2 text-xs text-muted-foreground">
                 <div className="flex items-center gap-1">
-                  <div className="w-1.5 h-1.5 rounded-full bg-green-500" />
+                  <i className="fas fa-circle text-green-500 text-[6px]"></i>
                   <span className="font-medium">Active</span>
                 </div>
                 <span>•</span>
-                <span>AI Companion</span>
+                <span><i className="fas fa-robot mr-1"></i>AI Companion</span>
               </div>
             </div>
           </div>
@@ -180,12 +176,8 @@ export const ChatInterface = ({ companionName, companionImage }: ChatInterfacePr
             size="icon"
             onClick={handleSend}
             disabled={!input.trim()}
-            className="group relative"
           >
-            <div className="flex items-center justify-center rotate-45">
-              <div className="w-4 h-0.5 bg-white group-hover:w-5 transition-all" />
-              <div className="w-0 h-0 border-l-[4px] border-l-white border-t-[3px] border-t-transparent border-b-[3px] border-b-transparent -ml-0.5" />
-            </div>
+            <i className="fas fa-paper-plane"></i>
           </Button>
         </div>
       </div>

@@ -53,12 +53,8 @@ const Companions = () => {
             variant="ghost" 
             size="icon"
             onClick={() => navigate('/')}
-            className="group"
           >
-            <div className="flex items-center justify-center">
-              <div className="w-5 h-0.5 bg-foreground group-hover:w-6 transition-all" />
-              <div className="w-0 h-0 border-r-[5px] border-r-foreground border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent -ml-1" />
-            </div>
+            <i className="fas fa-arrow-left"></i>
           </Button>
           <div>
             <h1 className="text-3xl font-bold gradient-text">Choose Your Companion</h1>

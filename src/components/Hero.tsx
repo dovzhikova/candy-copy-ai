@@ -16,7 +16,7 @@ export const Hero = () => {
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 text-center">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8 animate-fade-in">
-          <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+          <i className="fas fa-wand-magic-sparkles text-primary"></i>
           <span className="text-sm font-medium tracking-wide">AI-Powered Conversations</span>
         </div>
         
@@ -33,10 +33,10 @@ export const Hero = () => {
           <Button 
             variant="hero" 
             size="lg"
-            className="text-lg px-8 py-6 h-auto group"
+            className="text-lg px-8 py-6 h-auto"
             onClick={() => navigate('/companions')}
           >
-            <div className="w-2 h-2 rounded-full bg-white mr-2 group-hover:scale-125 transition-transform" />
+            <i className="fas fa-comments"></i>
             Start Chatting
           </Button>
           <Button 
@@ -44,6 +44,7 @@ export const Hero = () => {
             size="lg"
             className="text-lg px-8 py-6 h-auto"
           >
+            <i className="fas fa-bolt"></i>
             Learn More
           </Button>
         </div>

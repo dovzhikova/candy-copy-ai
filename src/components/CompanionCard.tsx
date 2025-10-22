@@ -32,10 +32,7 @@ export const CompanionCard = ({
         
         {/* Status Indicator */}
         <div className="absolute top-4 right-4 glass-card px-3 py-1.5 rounded-full flex items-center gap-2">
-          <div className="relative">
-            <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-            <div className="absolute inset-0 w-1.5 h-1.5 rounded-full bg-primary animate-ping" />
-          </div>
+          <i className="fas fa-circle-dot text-primary animate-pulse"></i>
           <span className="text-xs font-semibold tracking-wider">ACTIVE</span>
         </div>
       </div>
@@ -61,12 +58,11 @@ export const CompanionCard = ({
         
         <Button 
           variant="hero" 
-          className="w-full group relative overflow-hidden"
+          className="w-full"
           onClick={() => onSelect(id)}
         >
-          <span className="relative z-10">Connect Now</span>
-          <div className="absolute right-4 top-1/2 -translate-y-1/2 w-6 h-0.5 bg-white/50 group-hover:w-8 transition-all duration-300" />
-          <div className="absolute right-4 top-1/2 -translate-y-1/2 translate-x-1 w-0 h-0 border-l-[6px] border-l-white/50 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent group-hover:translate-x-2 transition-all duration-300" />
+          <i className="fas fa-comment-dots"></i>
+          Connect Now
         </Button>
       </div>
     </Card>
