@@ -13,6 +13,20 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        heading: ['Poppins', 'system-ui', 'sans-serif'],
+      },
+      spacing: {
+        '18': '4.5rem',
+        '88': '22rem',
+        '128': '32rem',
+      },
+      lineHeight: {
+        'tight': '1.2',
+        'snug': '1.375',
+        'relaxed': '1.75',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
