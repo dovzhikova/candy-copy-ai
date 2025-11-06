@@ -17,11 +17,6 @@ const slides = [{
   content: <div className="pitch-slide">
       <div className="max-w-6xl mx-auto w-full space-y-16 animate-fade-in-up">
         <div className="text-center space-y-8">
-          <div className="inline-flex items-center gap-2 px-6 py-3 pitch-accent-card animate-scale-in">
-            <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-sm font-semibold text-primary tracking-wide uppercase">Pre-Seed Investment Opportunity</span>
-          </div>
-          
           <div className="space-y-6">
             <h1 className="pitch-title text-8xl md:text-9xl gradient-text animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               PriviaAI
