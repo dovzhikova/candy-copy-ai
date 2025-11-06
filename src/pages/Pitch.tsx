@@ -9,15 +9,7 @@ const slides = [
     subtitle: "AI That Remembers.",
     content: (
       <div className="space-y-8 text-center">
-        <div className="space-y-4">
-          <h1 className="text-6xl font-bold gradient-text animate-fade-in">
-            PriviaAI
-          </h1>
-          <p className="text-3xl text-muted-foreground animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            AI That Remembers.
-          </p>
-        </div>
-        <div className="glass-card p-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+        <div className="glass-card p-8 animate-fade-in">
           <p className="text-xl text-foreground/80 mb-2">Daria Dovzhikova, Founder</p>
           <p className="text-lg text-primary font-medium">Live Platform | Characters by Pro Screenwriters</p>
         </div>
