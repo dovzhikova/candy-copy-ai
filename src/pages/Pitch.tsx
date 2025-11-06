@@ -18,7 +18,7 @@ const slides = [
           </p>
         </div>
         <div className="glass-card p-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-          <p className="text-xl text-foreground/80 mb-2">[Founder Name], Founder</p>
+          <p className="text-xl text-foreground/80 mb-2">Daria Dovzhikova, Founder</p>
           <p className="text-lg text-primary font-medium">Live Platform | Characters by Pro Screenwriters</p>
         </div>
       </div>
@@ -391,7 +391,7 @@ const slides = [
           <div className="space-y-4">
             <div>
               <h4 className="text-xl font-bold text-primary mb-1">Daria Dovzhikova</h4>
-              <p className="text-sm text-muted-foreground mb-4">Founder & CEO</p>
+              <p className="text-sm text-muted-foreground mb-4">Founder</p>
               <div className="space-y-3">
                 {[
                   { title: "AI & Product", desc: "Led product for AI and consumer apps; OpenAI, Claude, Hugging Face" },
@@ -571,7 +571,7 @@ const slides = [
           <div className="flex flex-wrap justify-center gap-4">
             <Button variant="default" size="lg" className="gap-2">
               <Mail className="w-4 h-4" />
-              [Founder Email]
+              dovzhikova@gmail.com
             </Button>
             <Button variant="outline" size="lg" asChild>
               <a href="http://privia-production.up.railway.app" target="_blank" rel="noopener noreferrer">
