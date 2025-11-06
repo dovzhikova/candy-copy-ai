@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Download, Mail } from "lucide-react";
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 
 const slides = [
   {
@@ -578,7 +580,9 @@ const slides = [
 ];
 
 const Pitch = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+const [currentSlide, setCurrentSlide] = useState(0);
+  const exportRef = useRef<HTMLDivElement>(null);
+  const [exporting, setExporting] = useState(false);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -588,8 +592,45 @@ const Pitch = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
-  const handleExport = () => {
-    window.print();
+const handleExport = async () => {
+    try {
+      setExporting(true);
+      const pdf = new jsPDF({ orientation: "landscape", unit: "pt", format: "a4" });
+      const pageWidth = pdf.internal.pageSize.getWidth();
+      const pageHeight = pdf.internal.pageSize.getHeight();
+
+      for (let i = 0; i < slides.length; i++) {
+        setCurrentSlide(i);
+        // Wait for slide to render
+        await new Promise((r) => setTimeout(r, 250));
+        const node = exportRef.current;
+        if (!node) continue;
+
+        const canvas = await html2canvas(node, {
+          backgroundColor: "#ffffff",
+          scale: 2,
+          useCORS: true,
+        });
+
+        const imgData = canvas.toDataURL("image/jpeg", 0.95);
+        const imgWidth = pageWidth;
+        const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+        if (i > 0) pdf.addPage();
+        pdf.addImage(imgData, "JPEG", 0, (pageHeight - imgHeight) / 2, imgWidth, imgHeight);
+      }
+
+      pdf.save("PriviaAI-Pitch.pdf");
+    } finally {
+      setExporting(false);
+    }
+  };
+
+  const renderSlideContentForPrint = (slide) => {
+    // Simple content extraction for print
+    return `<div style="font-size: 18px; line-height: 1.6; color: #333;">
+      <p>Slide content available in original presentation</p>
+    </div>`;
   };
 
   const slide = slides[currentSlide];
