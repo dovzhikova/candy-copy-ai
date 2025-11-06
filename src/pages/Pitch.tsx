@@ -7,7 +7,9 @@ const slides = [{
   subtitle: "AI That Remembers.",
   content: <div className="flex flex-col items-center justify-center h-full space-y-12">
         <div className="text-center space-y-6 animate-fade-in">
-          
+          <div className="inline-block px-6 py-2 glass-effect rounded-full animate-scale-in">
+            <span className="text-sm font-medium text-primary">Pre-Seed Investment Opportunity</span>
+          </div>
           <div className="space-y-4">
             <h1 className="text-7xl md:text-8xl font-bold gradient-text animate-fade-in" style={{
           animationDelay: "0.2s"
@@ -50,7 +52,11 @@ const slides = [{
           </div>
         </div>
 
-        
+        <div className="text-center text-sm text-muted-foreground animate-fade-in" style={{
+      animationDelay: "0.5s"
+    }}>
+          Version 6.0 • {new Date().getFullYear()}
+        </div>
       </div>
 }, {
   id: 2,
