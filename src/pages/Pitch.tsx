@@ -8,10 +8,49 @@ const slides = [
     title: "PriviaAI",
     subtitle: "AI That Remembers.",
     content: (
-      <div className="space-y-8 text-center">
-        <div className="glass-card p-8 animate-fade-in">
-          <p className="text-xl text-foreground/80 mb-2">Daria Dovzhikova, Founder</p>
-          <p className="text-lg text-primary font-medium">Live Platform | Characters by Pro Screenwriters</p>
+      <div className="flex flex-col items-center justify-center h-full space-y-12">
+        <div className="text-center space-y-6 animate-fade-in">
+          <div className="inline-block px-6 py-2 glass-effect rounded-full animate-scale-in">
+            <span className="text-sm font-medium text-primary">Pre-Seed Investment Opportunity</span>
+          </div>
+          <div className="space-y-4">
+            <h1 className="text-7xl md:text-8xl font-bold gradient-text animate-fade-in" style={{ animationDelay: "0.2s" }}>
+              PriviaAI
+            </h1>
+            <p className="text-4xl md:text-5xl text-foreground/90 font-light animate-fade-in" style={{ animationDelay: "0.3s" }}>
+              AI That Remembers.
+            </p>
+          </div>
+        </div>
+        
+        <div className="grid md:grid-cols-2 gap-6 w-full max-w-3xl animate-fade-in" style={{ animationDelay: "0.4s" }}>
+          <div className="glass-card p-8 text-center hover-scale">
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                <span className="text-2xl">👤</span>
+              </div>
+              <div>
+                <p className="text-xl font-semibold text-foreground">Daria Dovzhikova</p>
+                <p className="text-sm text-muted-foreground mt-1">Founder</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="glass-card p-8 text-center hover-scale">
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                <span className="text-2xl">🚀</span>
+              </div>
+              <div>
+                <p className="text-lg font-medium text-foreground">Live Platform</p>
+                <p className="text-sm text-muted-foreground mt-1">Characters by Pro Screenwriters</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center text-sm text-muted-foreground animate-fade-in" style={{ animationDelay: "0.5s" }}>
+          Version 6.0 • {new Date().getFullYear()}
         </div>
       </div>
     ),
