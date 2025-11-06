@@ -463,7 +463,7 @@ const slides = [{
           <div className="space-y-4">
             {[
               "Content Moat: Characters crafted by professional screenwriters - IP that cannot be easily replicated",
-              "Execution Speed: Feature-complete platform in 10 months as a small team",
+              "Execution Speed: Feature-complete platform in 2 months as a small team",
               "Technical Depth: Integrated system, not just a wrapper around an API"
             ].map((adv, idx) => (
               <div key={idx} className="flex gap-4">
