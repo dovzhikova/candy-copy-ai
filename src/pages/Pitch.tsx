@@ -1,14 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, Download, Mail } from "lucide-react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { exportToPPTX } from "@/utils/pptxExport";
-import { toast } from "sonner";
+import { ChevronLeft, ChevronRight, Mail } from "lucide-react";
 
 const slides = [{
   id: 1,
@@ -740,20 +732,6 @@ const Pitch = () => {
   const prevSlide = () => {
     setCurrentSlide(prev => (prev - 1 + slides.length) % slides.length);
   };
-
-  const handleExportPDF = () => {
-    window.print();
-  };
-
-  const handleExportPPTX = () => {
-    try {
-      exportToPPTX();
-      toast.success("PowerPoint presentation exported successfully!");
-    } catch (error) {
-      console.error("Error exporting PPTX:", error);
-      toast.error("Failed to export presentation. Please try again.");
-    }
-  };
   
   const slide = slides[currentSlide];
   
@@ -767,26 +745,6 @@ const Pitch = () => {
             <span className="text-sm text-muted-foreground font-medium">
               Slide {currentSlide + 1} of {slides.length}
             </span>
-          </div>
-          <div className="flex items-center gap-2">
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="sm" className="gap-2">
-                  <Download className="w-4 h-4" />
-                  Export
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-56">
-                <DropdownMenuItem onClick={handleExportPPTX}>
-                  <Download className="w-4 h-4 mr-2" />
-                  Export as PowerPoint (.pptx)
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={handleExportPDF}>
-                  <Download className="w-4 h-4 mr-2" />
-                  Export as PDF (Print)
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
           </div>
         </div>
       </header>
