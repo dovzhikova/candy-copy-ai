@@ -7,46 +7,44 @@ const slides = [{
   title: "PriviaAI",
   subtitle: "AI That Remembers.",
   content: <div className="pitch-slide">
-      <div className="max-w-6xl mx-auto w-full space-y-16 animate-fade-in-up">
-        <div className="text-center space-y-8">
-          <div className="space-y-6">
-            <h1 className="pitch-title text-8xl md:text-9xl gradient-text animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+      <div className="max-w-6xl mx-auto w-full space-y-6 md:space-y-12 animate-fade-in-up">
+        <div className="text-center space-y-4 md:space-y-6">
+            <h1 className="pitch-title text-5xl sm:text-6xl md:text-8xl lg:text-9xl gradient-text animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               PriviaAI
             </h1>
-            <p className="pitch-subtitle text-4xl md:text-5xl text-foreground/80 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+            <p className="pitch-subtitle text-xl sm:text-2xl md:text-4xl lg:text-5xl text-foreground/80 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
               AI That Remembers.
             </p>
           </div>
-        </div>
         
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-          <div className="pitch-card p-10 hover-scale">
-            <div className="flex items-center gap-4">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-primary flex items-center justify-center text-3xl">
+        <div className="grid sm:grid-cols-2 gap-3 md:gap-6 max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+          <div className="pitch-card p-5 md:p-10 hover-scale">
+            <div className="flex items-center gap-3 md:gap-4">
+              <div className="w-10 h-10 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-gradient-primary flex items-center justify-center text-xl md:text-3xl flex-shrink-0">
                 👤
               </div>
               <div className="text-left">
-                <p className="text-2xl font-bold text-foreground mb-1">Daria Dovzhikova</p>
-                <p className="text-base text-muted-foreground">Founder & CEO</p>
+                <p className="text-base md:text-2xl font-bold text-foreground mb-0.5 md:mb-1">Daria Dovzhikova</p>
+                <p className="text-xs md:text-base text-muted-foreground">Founder & CEO</p>
               </div>
             </div>
           </div>
           
-          <div className="pitch-card p-10 hover-scale">
-            <div className="flex items-center gap-4">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-primary flex items-center justify-center text-3xl">
+          <div className="pitch-card p-5 md:p-10 hover-scale">
+            <div className="flex items-center gap-3 md:gap-4">
+              <div className="w-10 h-10 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-gradient-primary flex items-center justify-center text-xl md:text-3xl flex-shrink-0">
                 🚀
               </div>
               <div className="text-left">
-                <p className="text-2xl font-bold text-foreground mb-1">Live Platform</p>
-                <p className="text-base text-muted-foreground">Characters by Pro Screenwriters</p>
+                <p className="text-base md:text-2xl font-bold text-foreground mb-0.5 md:mb-1">Live Platform</p>
+                <p className="text-xs md:text-base text-muted-foreground">Characters by Pro Screenwriters</p>
               </div>
             </div>
           </div>
         </div>
 
         <div className="text-center animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
-          <p className="text-sm text-muted-foreground/60 tracking-wider">November, 2025</p>
+          <p className="text-xs md:text-sm text-muted-foreground/60 tracking-wider">November, 2025</p>
         </div>
       </div>
     </div>
@@ -55,27 +53,27 @@ const slides = [{
   title: "The Problem",
   subtitle: "Digital Connection Lacks Depth.",
   content: <div className="pitch-slide">
-      <div className="max-w-5xl mx-auto space-y-10">
-        <div className="text-center space-y-4 mb-12 animate-fade-in-up">
-          <h2 className="pitch-title text-6xl md:text-7xl gradient-text">The Problem</h2>
-          <p className="pitch-subtitle text-2xl md:text-3xl text-muted-foreground">Digital Connection Lacks Depth.</p>
+      <div className="max-w-5xl mx-auto space-y-4 md:space-y-8">
+        <div className="text-center space-y-2 md:space-y-4 mb-6 md:mb-10 animate-fade-in-up">
+          <h2 className="pitch-title text-3xl sm:text-4xl md:text-6xl lg:text-7xl gradient-text">The Problem</h2>
+          <p className="pitch-subtitle text-base sm:text-lg md:text-2xl lg:text-3xl text-muted-foreground">Digital Connection Lacks Depth.</p>
         </div>
         
-        <div className="pitch-card p-12 space-y-8 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-          <p className="pitch-body text-2xl text-foreground/90 leading-relaxed">
+        <div className="pitch-card p-5 md:p-10 space-y-4 md:space-y-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+          <p className="pitch-body text-sm sm:text-base md:text-xl lg:text-2xl text-foreground/90 leading-relaxed">
             Existing AI chatbots are <span className="text-primary font-bold">robotic and forgetful</span>. 
             Social media is <span className="text-primary font-bold">performative, not personal</span>. 
             There is no available solution that combines memory, personality, and professional storytelling.
           </p>
           <div className="h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-          <p className="pitch-body text-xl text-foreground/70 leading-relaxed">
+          <p className="pitch-body text-xs sm:text-sm md:text-base lg:text-xl text-foreground/70 leading-relaxed">
             This creates a gap for users who want a meaningful, judgment-free connection that remembers and evolves with them.
           </p>
         </div>
         
-        <div className="pitch-accent-card p-10 border-l-4 border-primary animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-          <p className="text-2xl font-bold text-primary mb-3">The result</p>
-          <p className="pitch-body text-xl text-foreground/80">
+        <div className="pitch-accent-card p-4 md:p-8 border-l-4 border-primary animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-primary mb-2">The result</p>
+          <p className="pitch-body text-xs sm:text-sm md:text-base lg:text-xl text-foreground/80">
             A large, underserved market of people seeking genuine connection in a digital world.
           </p>
         </div>
@@ -86,20 +84,20 @@ const slides = [{
   title: "The Solution",
   subtitle: "AI Companions with Narrative Depth.",
   content: <div className="pitch-slide">
-      <div className="max-w-5xl mx-auto space-y-10">
-        <div className="text-center space-y-4 mb-12 animate-fade-in-up">
-          <h2 className="pitch-title text-6xl md:text-7xl gradient-text">The Solution</h2>
-          <p className="pitch-subtitle text-2xl md:text-3xl text-muted-foreground">AI Companions with Narrative Depth.</p>
+      <div className="max-w-5xl mx-auto space-y-4 md:space-y-8">
+        <div className="text-center space-y-2 md:space-y-4 mb-6 md:mb-10 animate-fade-in-up">
+          <h2 className="pitch-title text-3xl sm:text-4xl md:text-6xl lg:text-7xl gradient-text">The Solution</h2>
+          <p className="pitch-subtitle text-base sm:text-lg md:text-2xl lg:text-3xl text-muted-foreground">AI Companions with Narrative Depth.</p>
         </div>
         
-        <div className="pitch-card p-12 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-          <p className="pitch-body text-2xl text-foreground/90 leading-relaxed">
+        <div className="pitch-card p-5 md:p-10 animate-fade-in-up mb-4 md:mb-6" style={{ animationDelay: "0.1s" }}>
+          <p className="pitch-body text-sm sm:text-base md:text-xl lg:text-2xl text-foreground/90 leading-relaxed">
             PriviaAI is a platform for AI companions crafted by professional screenwriters. 
             Our AIs <span className="text-primary font-bold">remember, speak, create images, and evolve</span>.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid sm:grid-cols-2 gap-3 md:gap-6">
           {[{
             num: "1",
             title: "Characters by Screenwriters",
@@ -117,14 +115,14 @@ const slides = [{
             title: "User Customization",
             desc: "Users can also create and share their own AI companions."
           }].map((item, idx) => (
-            <div key={idx} className="pitch-card p-8 hover-scale animate-fade-in-up" style={{ animationDelay: `${0.2 + idx * 0.1}s` }}>
-              <div className="flex gap-5">
-                <div className="w-12 h-12 rounded-xl bg-gradient-primary flex items-center justify-center flex-shrink-0">
-                  <span className="text-primary-foreground text-xl font-bold">{item.num}</span>
+            <div key={idx} className="pitch-card p-4 md:p-6 hover-scale animate-fade-in-up" style={{ animationDelay: `${0.2 + idx * 0.1}s` }}>
+              <div className="flex gap-3 md:gap-4">
+                <div className="w-8 h-8 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-gradient-primary flex items-center justify-center flex-shrink-0">
+                  <span className="text-primary-foreground text-sm md:text-xl font-bold">{item.num}</span>
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-foreground mb-3">{item.title}</h4>
-                  <p className="pitch-body text-base text-muted-foreground leading-relaxed">{item.desc}</p>
+                  <h4 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-foreground mb-1 md:mb-2">{item.title}</h4>
+                  <p className="pitch-body text-xs md:text-sm lg:text-base text-muted-foreground leading-relaxed">{item.desc}</p>
                 </div>
               </div>
             </div>
@@ -137,13 +135,13 @@ const slides = [{
   title: "The Market",
   subtitle: "A $900M Market Growing 64% YoY.",
   content: <div className="pitch-slide">
-      <div className="max-w-5xl mx-auto space-y-10">
-        <div className="text-center space-y-4 mb-12 animate-fade-in-up">
-          <h2 className="pitch-title text-6xl md:text-7xl gradient-text">The Market</h2>
-          <p className="pitch-subtitle text-2xl md:text-3xl text-muted-foreground">A $900M Market Growing 64% YoY.</p>
+      <div className="max-w-5xl mx-auto space-y-4 md:space-y-8">
+        <div className="text-center space-y-2 md:space-y-4 mb-6 md:mb-10 animate-fade-in-up">
+          <h2 className="pitch-title text-3xl sm:text-4xl md:text-6xl lg:text-7xl gradient-text">The Market</h2>
+          <p className="pitch-subtitle text-base sm:text-lg md:text-2xl lg:text-3xl text-muted-foreground">A $900M Market Growing 64% YoY.</p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-3 gap-3 md:gap-6">
           {[{
             label: "TAM",
             value: "$10.8B",
@@ -157,25 +155,25 @@ const slides = [{
             value: "$9M ARR",
             desc: "Our initial target (1%)"
           }].map((item, idx) => (
-            <div key={idx} className="pitch-card p-10 text-center hover-scale animate-fade-in-up" style={{ animationDelay: `${idx * 0.1}s` }}>
-              <p className="text-sm text-muted-foreground mb-4 uppercase tracking-wider">{item.label}</p>
-              <p className="pitch-stat-number text-5xl mb-4">{item.value}</p>
-              <p className="pitch-body text-sm text-foreground/70">{item.desc}</p>
+            <div key={idx} className="pitch-card p-3 md:p-8 text-center hover-scale animate-fade-in-up" style={{ animationDelay: `${idx * 0.1}s` }}>
+              <p className="text-xs md:text-sm text-muted-foreground mb-2 md:mb-3 uppercase tracking-wider">{item.label}</p>
+              <p className="pitch-stat-number text-xl sm:text-2xl md:text-4xl lg:text-5xl mb-2 md:mb-4">{item.value}</p>
+              <p className="pitch-body text-xs md:text-sm text-foreground/70">{item.desc}</p>
             </div>
           ))}
         </div>
         
-        <div className="pitch-card p-12 space-y-6 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-          <h4 className="text-3xl font-bold text-primary mb-6">Why Now</h4>
-          <div className="space-y-5">
+        <div className="pitch-card p-5 md:p-10 space-y-3 md:space-y-5 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+          <h4 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-primary mb-3 md:mb-5">Why Now</h4>
+          <div className="space-y-2 md:space-y-4">
             {[
               "Loneliness is a growing problem: 47% of Americans feel alone 3+ days per week.",
               "LLMs are powerful enough: Modern AI enables natural, context-aware conversations.",
               "Users demand quality: The market is saturated with generic content; users will pay for premium experiences."
             ].map((text, idx) => (
-              <div key={idx} className="flex gap-4">
-                <div className="w-3 h-3 rounded-full bg-gradient-primary mt-2 flex-shrink-0" />
-                <p className="pitch-body text-lg text-foreground/80 leading-relaxed">{text}</p>
+              <div key={idx} className="flex gap-2 md:gap-4">
+                <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-gradient-primary mt-1.5 md:mt-2 flex-shrink-0" />
+                <p className="pitch-body text-xs sm:text-sm md:text-base lg:text-lg text-foreground/80 leading-relaxed">{text}</p>
               </div>
             ))}
           </div>
@@ -736,51 +734,51 @@ const Pitch = () => {
   const slide = slides[currentSlide];
   
   return (
-    <div className="min-h-screen bg-gradient-hero flex flex-col">
+    <div className="h-screen bg-gradient-hero flex flex-col overflow-hidden">
       {/* Header */}
-      <header className="glass-card border-b sticky top-0 z-50 backdrop-blur-xl">
-        <div className="container mx-auto px-6 py-5 flex items-center justify-between">
-          <div className="flex items-center gap-6">
-            <h1 className="text-2xl font-bold gradient-text">PriviaAI Pitch Deck</h1>
-            <span className="text-sm text-muted-foreground font-medium">
-              Slide {currentSlide + 1} of {slides.length}
+      <header className="glass-card border-b z-50 backdrop-blur-xl flex-shrink-0">
+        <div className="container mx-auto px-3 md:px-6 py-2 md:py-3 flex items-center justify-between">
+          <div className="flex items-center gap-2 md:gap-6">
+            <h1 className="text-sm md:text-xl font-bold gradient-text">PriviaAI Pitch Deck</h1>
+            <span className="text-xs md:text-sm text-muted-foreground font-medium">
+              {currentSlide + 1}/{slides.length}
             </span>
           </div>
         </div>
       </header>
 
       {/* Slide Content */}
-      <main className="flex-1 flex items-center justify-center px-4 py-8">
-        <div className="w-full max-w-7xl">
+      <main className="flex-1 flex items-center justify-center overflow-y-auto px-2 md:px-4 py-3 md:py-6">
+        <div className="w-full max-w-6xl h-full flex items-center">
           {slide.content}
         </div>
       </main>
 
       {/* Navigation */}
-      <footer className="glass-card border-t backdrop-blur-xl">
-        <div className="container mx-auto px-6 py-6">
+      <footer className="glass-card border-t backdrop-blur-xl flex-shrink-0">
+        <div className="container mx-auto px-3 md:px-6 py-2 md:py-4">
           <div className="flex items-center justify-between max-w-5xl mx-auto">
             <Button 
               variant="outline" 
-              size="lg" 
+              size="sm"
               onClick={prevSlide} 
               disabled={currentSlide === 0} 
-              className="gap-2 px-8"
+              className="gap-1 md:gap-2 px-3 md:px-6"
             >
-              <ChevronLeft className="w-5 h-5" />
-              Previous
+              <ChevronLeft className="w-4 h-4" />
+              <span className="hidden sm:inline">Previous</span>
             </Button>
 
             {/* Slide Indicators */}
-            <div className="flex gap-2">
+            <div className="flex gap-1.5 md:gap-2">
               {slides.map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => setCurrentSlide(idx)}
                   className={`rounded-full transition-all ${
                     idx === currentSlide 
-                      ? "bg-primary w-10 h-2.5" 
-                      : "bg-muted-foreground/30 hover:bg-muted-foreground/50 w-2.5 h-2.5"
+                      ? "bg-primary w-6 md:w-10 h-2" 
+                      : "bg-muted-foreground/30 hover:bg-muted-foreground/50 w-2 h-2"
                   }`}
                   aria-label={`Go to slide ${idx + 1}`}
                 />
@@ -789,13 +787,13 @@ const Pitch = () => {
 
             <Button 
               variant="default" 
-              size="lg" 
+              size="sm"
               onClick={nextSlide} 
               disabled={currentSlide === slides.length - 1} 
-              className="gap-2 px-8"
+              className="gap-1 md:gap-2 px-3 md:px-6"
             >
-              Next
-              <ChevronRight className="w-5 h-5" />
+              <span className="hidden sm:inline">Next</span>
+              <ChevronRight className="w-4 h-4" />
             </Button>
           </div>
         </div>
