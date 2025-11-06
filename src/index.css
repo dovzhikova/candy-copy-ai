@@ -221,6 +221,73 @@ All colors MUST be HSL.
     animation: subtle-pulse 3s ease-in-out infinite;
   }
   
+  /* Pitch deck specific styles */
+  .pitch-slide {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 2rem;
+  }
+  
+  .pitch-title {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+  
+  .pitch-subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    line-height: 1.4;
+  }
+  
+  .pitch-body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+  
+  .pitch-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+    backdrop-filter: blur(100px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.5rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .pitch-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(244, 63, 94, 0.15);
+  }
+  
+  .pitch-accent-card {
+    background: linear-gradient(135deg, rgba(244, 63, 94, 0.08) 0%, rgba(251, 146, 60, 0.05) 100%);
+    backdrop-filter: blur(80px);
+    border: 1px solid rgba(244, 63, 94, 0.2);
+    border-radius: 1rem;
+  }
+  
+  .pitch-stat-number {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 800;
+    background: linear-gradient(135deg, hsl(350, 85%, 60%) 0%, hsl(30, 95%, 65%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .hover-scale {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.02);
+  }
+
   /* Print styles for pitch deck export */
   @media print {
     @page {

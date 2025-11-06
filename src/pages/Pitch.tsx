@@ -9,545 +9,722 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { exportToPPTX } from "@/utils/pptxExport";
 import { toast } from "sonner";
+
 const slides = [{
   id: 1,
   title: "PriviaAI",
   subtitle: "AI That Remembers.",
-  content: <div className="flex flex-col items-center justify-center h-full space-y-12">
-        <div className="text-center space-y-6 animate-fade-in">
-          <div className="inline-block px-6 py-2 glass-effect rounded-full animate-scale-in">
-            <span className="text-sm font-medium text-primary">Pre-Seed Investment Opportunity</span>
+  content: <div className="pitch-slide">
+      <div className="max-w-6xl mx-auto w-full space-y-16 animate-fade-in-up">
+        <div className="text-center space-y-8">
+          <div className="inline-flex items-center gap-2 px-6 py-3 pitch-accent-card animate-scale-in">
+            <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            <span className="text-sm font-semibold text-primary tracking-wide uppercase">Pre-Seed Investment Opportunity</span>
           </div>
-          <div className="space-y-4">
-            <h1 className="text-7xl md:text-8xl font-bold gradient-text animate-fade-in" style={{
-          animationDelay: "0.2s"
-        }}>
+          
+          <div className="space-y-6">
+            <h1 className="pitch-title text-8xl md:text-9xl gradient-text animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               PriviaAI
             </h1>
-            <p className="text-4xl md:text-5xl text-foreground/90 font-light animate-fade-in" style={{
-          animationDelay: "0.3s"
-        }}>
+            <p className="pitch-subtitle text-4xl md:text-5xl text-foreground/80 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
               AI That Remembers.
             </p>
           </div>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-6 w-full max-w-3xl animate-fade-in" style={{
-      animationDelay: "0.4s"
-    }}>
-          <div className="glass-card p-8 text-center hover-scale">
-            <div className="flex flex-col items-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
-                <span className="text-2xl">👤</span>
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+          <div className="pitch-card p-10 hover-scale">
+            <div className="flex items-center gap-4">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-primary flex items-center justify-center text-3xl">
+                👤
               </div>
-              <div>
-                <p className="text-xl font-semibold text-foreground">Daria Dovzhikova</p>
-                <p className="text-sm text-muted-foreground mt-1">Founder</p>
+              <div className="text-left">
+                <p className="text-2xl font-bold text-foreground mb-1">Daria Dovzhikova</p>
+                <p className="text-base text-muted-foreground">Founder & CEO</p>
               </div>
             </div>
           </div>
           
-          <div className="glass-card p-8 text-center hover-scale">
-            <div className="flex flex-col items-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
-                <span className="text-2xl">🚀</span>
+          <div className="pitch-card p-10 hover-scale">
+            <div className="flex items-center gap-4">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-primary flex items-center justify-center text-3xl">
+                🚀
               </div>
-              <div>
-                <p className="text-lg font-medium text-foreground">Live Platform</p>
-                <p className="text-sm text-muted-foreground mt-1">Characters by Pro Screenwriters</p>
+              <div className="text-left">
+                <p className="text-2xl font-bold text-foreground mb-1">Live Platform</p>
+                <p className="text-base text-muted-foreground">Characters by Pro Screenwriters</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="text-center text-sm text-muted-foreground animate-fade-in" style={{
-      animationDelay: "0.5s"
-    }}>
-          November, 2025
+        <div className="text-center animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
+          <p className="text-sm text-muted-foreground/60 tracking-wider">November, 2025</p>
         </div>
       </div>
+    </div>
 }, {
   id: 2,
   title: "The Problem",
   subtitle: "Digital Connection Lacks Depth.",
-  content: <div className="space-y-6">
-        <div className="glass-card p-8 space-y-4">
-          <p className="text-xl text-foreground/90 leading-relaxed">
-            Existing AI chatbots are <span className="text-primary font-semibold">robotic and forgetful</span>. 
-            Social media is <span className="text-primary font-semibold">performative, not personal</span>. 
+  content: <div className="pitch-slide">
+      <div className="max-w-5xl mx-auto space-y-10">
+        <div className="text-center space-y-4 mb-12 animate-fade-in-up">
+          <h2 className="pitch-title text-6xl md:text-7xl gradient-text">The Problem</h2>
+          <p className="pitch-subtitle text-2xl md:text-3xl text-muted-foreground">Digital Connection Lacks Depth.</p>
+        </div>
+        
+        <div className="pitch-card p-12 space-y-8 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+          <p className="pitch-body text-2xl text-foreground/90 leading-relaxed">
+            Existing AI chatbots are <span className="text-primary font-bold">robotic and forgetful</span>. 
+            Social media is <span className="text-primary font-bold">performative, not personal</span>. 
             There is no available solution that combines memory, personality, and professional storytelling.
           </p>
-          <div className="h-px bg-gradient-primary opacity-20" />
-          <p className="text-lg text-foreground/80">
+          <div className="h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+          <p className="pitch-body text-xl text-foreground/70 leading-relaxed">
             This creates a gap for users who want a meaningful, judgment-free connection that remembers and evolves with them.
           </p>
         </div>
-        <div className="glass-effect p-6 border-l-4 border-primary">
-          <p className="text-xl font-semibold text-primary">The result</p>
-          <p className="text-lg text-foreground/90 mt-2">
+        
+        <div className="pitch-accent-card p-10 border-l-4 border-primary animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+          <p className="text-2xl font-bold text-primary mb-3">The result</p>
+          <p className="pitch-body text-xl text-foreground/80">
             A large, underserved market of people seeking genuine connection in a digital world.
           </p>
         </div>
       </div>
+    </div>
 }, {
   id: 3,
   title: "The Solution",
   subtitle: "AI Companions with Narrative Depth.",
-  content: <div className="space-y-6">
-        <div className="glass-card p-8">
-          <p className="text-xl text-foreground/90 leading-relaxed mb-6">
+  content: <div className="pitch-slide">
+      <div className="max-w-5xl mx-auto space-y-10">
+        <div className="text-center space-y-4 mb-12 animate-fade-in-up">
+          <h2 className="pitch-title text-6xl md:text-7xl gradient-text">The Solution</h2>
+          <p className="pitch-subtitle text-2xl md:text-3xl text-muted-foreground">AI Companions with Narrative Depth.</p>
+        </div>
+        
+        <div className="pitch-card p-12 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+          <p className="pitch-body text-2xl text-foreground/90 leading-relaxed">
             PriviaAI is a platform for AI companions crafted by professional screenwriters. 
-            Our AIs <span className="text-primary font-semibold">remember, speak, create images, and evolve</span>.
+            Our AIs <span className="text-primary font-bold">remember, speak, create images, and evolve</span>.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 gap-4">
+        
+        <div className="grid md:grid-cols-2 gap-6">
           {[{
-        title: "Characters by Screenwriters",
-        desc: "Deep, engaging personalities, like an interactive HBO series."
-      }, {
-        title: "Perfect Memory",
-        desc: "Remembers user preferences, past conversations, and emotional context."
-      }, {
-        title: "Multi-modal Communication",
-        desc: "Text, voice, and images in a single, natural flow."
-      }, {
-        title: "User Customization",
-        desc: "Users can also create and share their own AI companions."
-      }].map((item, idx) => <div key={idx} className="glass-effect p-6 hover-scale animate-fade-in" style={{
-        animationDelay: `${idx * 0.1}s`
-      }}>
-              <div className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                  <span className="text-primary font-bold">{idx + 1}</span>
+            num: "1",
+            title: "Characters by Screenwriters",
+            desc: "Deep, engaging personalities, like an interactive HBO series."
+          }, {
+            num: "2",
+            title: "Perfect Memory",
+            desc: "Remembers user preferences, past conversations, and emotional context."
+          }, {
+            num: "3",
+            title: "Multi-modal Communication",
+            desc: "Text, voice, and images in a single, natural flow."
+          }, {
+            num: "4",
+            title: "User Customization",
+            desc: "Users can also create and share their own AI companions."
+          }].map((item, idx) => (
+            <div key={idx} className="pitch-card p-8 hover-scale animate-fade-in-up" style={{ animationDelay: `${0.2 + idx * 0.1}s` }}>
+              <div className="flex gap-5">
+                <div className="w-12 h-12 rounded-xl bg-gradient-primary flex items-center justify-center flex-shrink-0">
+                  <span className="text-primary-foreground text-xl font-bold">{item.num}</span>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground mb-2">{item.title}</h4>
-                  <p className="text-sm text-muted-foreground">{item.desc}</p>
+                  <h4 className="text-xl font-bold text-foreground mb-3">{item.title}</h4>
+                  <p className="pitch-body text-base text-muted-foreground leading-relaxed">{item.desc}</p>
                 </div>
               </div>
-            </div>)}
+            </div>
+          ))}
         </div>
       </div>
+    </div>
 }, {
   id: 4,
   title: "The Market",
   subtitle: "A $900M Market Growing 64% YoY.",
-  content: <div className="space-y-6">
-        <div className="grid md:grid-cols-3 gap-4">
-          {[{
-        label: "TAM",
-        value: "$10.8B",
-        desc: "50M users × $18/mo ARPU"
-      }, {
-        label: "SAM",
-        value: "$900M",
-        desc: "AI companion market"
-      }, {
-        label: "SOM",
-        value: "$9M ARR",
-        desc: "Our initial target (1%)"
-      }].map((item, idx) => <div key={idx} className="glass-card p-6 text-center hover-scale animate-fade-in" style={{
-        animationDelay: `${idx * 0.1}s`
-      }}>
-              <p className="text-sm text-muted-foreground mb-2">{item.label}</p>
-              <p className="text-3xl font-bold gradient-text mb-2">{item.value}</p>
-              <p className="text-xs text-foreground/70">{item.desc}</p>
-            </div>)}
+  content: <div className="pitch-slide">
+      <div className="max-w-5xl mx-auto space-y-10">
+        <div className="text-center space-y-4 mb-12 animate-fade-in-up">
+          <h2 className="pitch-title text-6xl md:text-7xl gradient-text">The Market</h2>
+          <p className="pitch-subtitle text-2xl md:text-3xl text-muted-foreground">A $900M Market Growing 64% YoY.</p>
         </div>
-        <div className="glass-card p-8 space-y-4">
-          <h4 className="text-xl font-semibold text-primary mb-4">Why Now</h4>
-          <div className="space-y-3">
-            {["Loneliness is a growing problem: 47% of Americans feel alone 3+ days per week.", "LLMs are powerful enough: Modern AI enables natural, context-aware conversations.", "Users demand quality: The market is saturated with generic content; users will pay for premium experiences."].map((text, idx) => <div key={idx} className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                <p className="text-foreground/80">{text}</p>
-              </div>)}
+        
+        <div className="grid md:grid-cols-3 gap-6">
+          {[{
+            label: "TAM",
+            value: "$10.8B",
+            desc: "50M users × $18/mo ARPU"
+          }, {
+            label: "SAM",
+            value: "$900M",
+            desc: "AI companion market"
+          }, {
+            label: "SOM",
+            value: "$9M ARR",
+            desc: "Our initial target (1%)"
+          }].map((item, idx) => (
+            <div key={idx} className="pitch-card p-10 text-center hover-scale animate-fade-in-up" style={{ animationDelay: `${idx * 0.1}s` }}>
+              <p className="text-sm text-muted-foreground mb-4 uppercase tracking-wider">{item.label}</p>
+              <p className="pitch-stat-number text-5xl mb-4">{item.value}</p>
+              <p className="pitch-body text-sm text-foreground/70">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+        
+        <div className="pitch-card p-12 space-y-6 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+          <h4 className="text-3xl font-bold text-primary mb-6">Why Now</h4>
+          <div className="space-y-5">
+            {[
+              "Loneliness is a growing problem: 47% of Americans feel alone 3+ days per week.",
+              "LLMs are powerful enough: Modern AI enables natural, context-aware conversations.",
+              "Users demand quality: The market is saturated with generic content; users will pay for premium experiences."
+            ].map((text, idx) => (
+              <div key={idx} className="flex gap-4">
+                <div className="w-3 h-3 rounded-full bg-gradient-primary mt-2 flex-shrink-0" />
+                <p className="pitch-body text-lg text-foreground/80 leading-relaxed">{text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
+    </div>
 }, {
   id: 5,
   title: "Product & Tech",
   subtitle: "Production-Ready & Scalable.",
-  content: <div className="space-y-6">
-        <div className="glass-card p-8 space-y-6">
+  content: <div className="pitch-slide">
+      <div className="max-w-5xl mx-auto space-y-10">
+        <div className="text-center space-y-4 mb-12 animate-fade-in-up">
+          <h2 className="pitch-title text-6xl md:text-7xl gradient-text">Product & Tech</h2>
+          <p className="pitch-subtitle text-2xl md:text-3xl text-muted-foreground">Production-Ready & Scalable.</p>
+        </div>
+        
+        <div className="pitch-card p-12 space-y-10 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
           <div>
-            <h4 className="text-lg font-semibold text-primary mb-3">Tech Stack</h4>
-            <div className="grid md:grid-cols-2 gap-4">
+            <h4 className="text-2xl font-bold text-primary mb-6">Tech Stack</h4>
+            <div className="grid md:grid-cols-2 gap-6">
               {[{
-            label: "Frontend",
-            value: "React 18, TypeScript, TailwindCSS"
-          }, {
-            label: "Backend",
-            value: "Node.js, Express, TypeScript"
-          }, {
-            label: "Database",
-            value: "PostgreSQL with pgvector"
-          }, {
-            label: "AI/ML",
-            value: "OpenAI GPT-4, DALL-E 3, Whisper, ElevenLabs"
-          }].map((item, idx) => <div key={idx} className="glass-effect p-4">
-                  <p className="text-sm font-semibold text-primary mb-1">{item.label}</p>
-                  <p className="text-sm text-foreground/80">{item.value}</p>
-                </div>)}
+                label: "Frontend",
+                value: "React 18, TypeScript, TailwindCSS"
+              }, {
+                label: "Backend",
+                value: "Node.js, Express, TypeScript"
+              }, {
+                label: "Database",
+                value: "PostgreSQL with pgvector"
+              }, {
+                label: "AI/ML",
+                value: "OpenAI GPT-4, DALL-E 3, Whisper, ElevenLabs"
+              }].map((item, idx) => (
+                <div key={idx} className="glass-effect-strong p-6 rounded-xl">
+                  <p className="text-sm font-bold text-primary mb-2 uppercase tracking-wider">{item.label}</p>
+                  <p className="pitch-body text-base text-foreground/80">{item.value}</p>
+                </div>
+              ))}
             </div>
           </div>
-          <div className="h-px bg-gradient-primary opacity-20" />
+          
+          <div className="h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+          
           <div>
-            <h4 className="text-lg font-semibold text-primary mb-3">Key Achievements</h4>
-            <div className="space-y-3">
+            <h4 className="text-2xl font-bold text-primary mb-6">Key Achievements</h4>
+            <div className="space-y-5">
               {[{
-            title: "Personality System",
-            desc: "Character Bible for deep, multi-faceted personas"
-          }, {
-            title: "Memory Engine",
-            desc: "Vector embeddings with temporal weighting"
-          }, {
-            title: "Multi-Modal Integration",
-            desc: "Seamless text, voice, and image generation"
-          }].map((item, idx) => <div key={idx} className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                title: "Personality System",
+                desc: "Character Bible for deep, multi-faceted personas"
+              }, {
+                title: "Memory Engine",
+                desc: "Vector embeddings with temporal weighting"
+              }, {
+                title: "Multi-Modal Integration",
+                desc: "Seamless text, voice, and image generation"
+              }].map((item, idx) => (
+                <div key={idx} className="flex gap-4">
+                  <div className="w-3 h-3 rounded-full bg-gradient-primary mt-2 flex-shrink-0" />
                   <div>
-                    <span className="font-semibold text-foreground">{item.title}:</span>{" "}
-                    <span className="text-foreground/80">{item.desc}</span>
+                    <span className="pitch-body text-lg font-bold text-foreground">{item.title}:</span>
+                    {" "}
+                    <span className="pitch-body text-lg text-foreground/70">{item.desc}</span>
                   </div>
-                </div>)}
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
+    </div>
 }, {
   id: 6,
   title: "Progress",
   subtitle: "From Idea to Live Product in 10 Months.",
-  content: <div className="space-y-6">
-        <div className="glass-card p-8">
-          <p className="text-xl text-center text-foreground/90 mb-8">
-            High-velocity execution: complex platform with <span className="text-primary font-semibold">zero outside funding</span>.
+  content: <div className="pitch-slide">
+      <div className="max-w-5xl mx-auto space-y-10">
+        <div className="text-center space-y-4 mb-12 animate-fade-in-up">
+          <h2 className="pitch-title text-6xl md:text-7xl gradient-text">Progress</h2>
+          <p className="pitch-subtitle text-2xl md:text-3xl text-muted-foreground">From Idea to Live Product in 10 Months.</p>
+        </div>
+        
+        <div className="pitch-card p-12 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+          <p className="pitch-body text-2xl text-center text-foreground/90 mb-12 leading-relaxed">
+            High-velocity execution: complex platform with <span className="text-primary font-bold">zero outside funding</span>.
           </p>
-          <div className="grid md:grid-cols-2 gap-4">
+          
+          <div className="grid md:grid-cols-2 gap-6">
             {[{
-          title: "Launched MVP",
-          detail: "January 2025"
-        }, {
-          title: "Shipped 10+ Major Features",
-          detail: "Voice, images, vector memory"
-        }, {
-          title: "Monetization Live",
-          detail: "PayPal, Paddle, NOWPayments"
-        }, {
-          title: "Platform Stable",
-          detail: "99.9% uptime since launch"
-        }].map((item, idx) => <div key={idx} className="glass-effect p-6 hover-scale animate-fade-in" style={{
-          animationDelay: `${idx * 0.1}s`
-        }}>
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center">
-                    <div className="w-2 h-2 rounded-full bg-primary" />
+              title: "Launched MVP",
+              detail: "January 2025"
+            }, {
+              title: "Shipped 10+ Major Features",
+              detail: "Voice, images, vector memory"
+            }, {
+              title: "Monetization Live",
+              detail: "PayPal, Paddle, NOWPayments"
+            }, {
+              title: "Platform Stable",
+              detail: "99.9% uptime since launch"
+            }].map((item, idx) => (
+              <div key={idx} className="glass-effect-strong p-8 rounded-xl hover-scale" style={{ animationDelay: `${0.2 + idx * 0.1}s` }}>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
+                    <div className="w-3 h-3 rounded-full bg-primary" />
                   </div>
-                  <h4 className="font-semibold text-foreground">{item.title}</h4>
+                  <h4 className="text-xl font-bold text-foreground">{item.title}</h4>
                 </div>
-                <p className="text-sm text-muted-foreground ml-9">{item.detail}</p>
-              </div>)}
+                <p className="pitch-body text-base text-muted-foreground ml-14">{item.detail}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
+    </div>
 }, {
   id: 7,
   title: "Business Model",
   subtitle: "Freemium SaaS with a Content Upsell.",
-  content: <div className="space-y-6">
-        <div className="glass-card p-8">
-          <p className="text-lg text-center text-foreground/90 mb-6">
+  content: <div className="pitch-slide">
+      <div className="max-w-5xl mx-auto space-y-10">
+        <div className="text-center space-y-4 mb-12 animate-fade-in-up">
+          <h2 className="pitch-title text-6xl md:text-7xl gradient-text">Business Model</h2>
+          <p className="pitch-subtitle text-2xl md:text-3xl text-muted-foreground">Freemium SaaS with a Content Upsell.</p>
+        </div>
+        
+        <div className="pitch-card p-12 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+          <p className="pitch-body text-xl text-center text-foreground/80 mb-10">
             Acquire users with free tier, convert with premium professionally written characters.
           </p>
-          <div className="grid md:grid-cols-3 gap-4">
+          
+          <div className="grid md:grid-cols-3 gap-6">
             {[{
-          tier: "Free",
-          price: "$0",
-          features: ["Limited messaging", "Community-created AIs"]
-        }, {
-          tier: "Basic",
-          price: "$9.99/mo",
-          features: ["Unlimited messaging", "Create custom AIs"]
-        }, {
-          tier: "Premium",
-          price: "$19.99/mo",
-          features: ["Screenwriter-crafted AIs", "Voice & images"],
-          highlight: true
-        }].map((plan, idx) => <div key={idx} className={`glass-effect p-6 hover-scale animate-fade-in ${plan.highlight ? "border-2 border-primary" : ""}`} style={{
-          animationDelay: `${idx * 0.1}s`
-        }}>
-                <h4 className="text-xl font-bold text-foreground mb-2">{plan.tier}</h4>
-                <p className="text-2xl font-bold gradient-text mb-4">{plan.price}</p>
-                <div className="space-y-2">
-                  {plan.features.map((feature, i) => <div key={i} className="flex items-start gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                      <p className="text-sm text-foreground/80">{feature}</p>
-                    </div>)}
+              tier: "Free",
+              price: "$0",
+              features: ["Limited messaging", "Community-created AIs"],
+              highlight: false
+            }, {
+              tier: "Basic",
+              price: "$9.99/mo",
+              features: ["Unlimited messaging", "Create custom AIs"],
+              highlight: false
+            }, {
+              tier: "Premium",
+              price: "$19.99/mo",
+              features: ["Screenwriter-crafted AIs", "Voice & images"],
+              highlight: true
+            }].map((plan, idx) => (
+              <div 
+                key={idx} 
+                className={`pitch-card p-8 hover-scale ${plan.highlight ? "border-2 border-primary shadow-[0_0_30px_rgba(244,63,94,0.3)]" : ""}`}
+                style={{ animationDelay: `${0.2 + idx * 0.1}s` }}
+              >
+                <h4 className="text-2xl font-bold text-foreground mb-2">{plan.tier}</h4>
+                <p className="pitch-stat-number text-4xl mb-6">{plan.price}</p>
+                <div className="space-y-3">
+                  {plan.features.map((feature, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                      <p className="pitch-body text-sm text-foreground/70">{feature}</p>
+                    </div>
+                  ))}
                 </div>
-              </div>)}
+              </div>
+            ))}
           </div>
         </div>
-        <div className="glass-effect p-6 space-y-3">
-          <h4 className="font-semibold text-primary">Why it works</h4>
-          <div className="space-y-2">
-            <p className="text-sm text-foreground/80">• Clear Value Prop: Premium content justifies the premium price</p>
-            <p className="text-sm text-foreground/80">• High Switching Costs: Memory and emotional connection reduce churn</p>
+        
+        <div className="pitch-accent-card p-8 space-y-4 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+          <h4 className="text-xl font-bold text-primary">Why it works</h4>
+          <div className="space-y-3">
+            <p className="pitch-body text-base text-foreground/70">• Clear Value Prop: Premium content justifies the premium price</p>
+            <p className="pitch-body text-base text-foreground/70">• High Switching Costs: Memory and emotional connection reduce churn</p>
           </div>
         </div>
       </div>
+    </div>
 }, {
   id: 8,
   title: "Go-to-Market",
   subtitle: "Validate Organically, Then Scale.",
-  content: <div className="space-y-6">
-        {[{
-      phase: "Phase 1 (Current)",
-      title: "Organic Validation",
-      items: ["Channels: Reddit, Twitter, Discord", "Goal: Acquire first 1,000 users, gather feedback"]
-    }, {
-      phase: "Phase 2 (Post-Funding)",
-      title: "Find Repeatable Channels",
-      items: ["Goal: Use funding to find 1-2 repeatable acquisition channels", "Experiments: Influencer marketing, paid social (TikTok, Reddit)"]
-    }, {
-      phase: "Phase 3 (Series A)",
-      title: "Scale",
-      items: ["Double down on channels with the best LTV/CAC ratio"]
-    }].map((phase, idx) => <div key={idx} className="glass-card p-6 hover-scale animate-fade-in" style={{
-      animationDelay: `${idx * 0.1}s`
-    }}>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
-                <span className="text-primary font-bold">{idx + 1}</span>
+  content: <div className="pitch-slide">
+      <div className="max-w-5xl mx-auto space-y-10">
+        <div className="text-center space-y-4 mb-12 animate-fade-in-up">
+          <h2 className="pitch-title text-6xl md:text-7xl gradient-text">Go-to-Market</h2>
+          <p className="pitch-subtitle text-2xl md:text-3xl text-muted-foreground">Validate Organically, Then Scale.</p>
+        </div>
+        
+        <div className="space-y-6">
+          {[{
+            phase: "Phase 1 (Current)",
+            title: "Organic Validation",
+            items: [
+              "Channels: Reddit, Twitter, Discord",
+              "Goal: Acquire first 1,000 users, gather feedback"
+            ]
+          }, {
+            phase: "Phase 2 (Post-Funding)",
+            title: "Find Repeatable Channels",
+            items: [
+              "Goal: Use funding to find 1-2 repeatable acquisition channels",
+              "Experiments: Influencer marketing, paid social (TikTok, Reddit)"
+            ]
+          }, {
+            phase: "Phase 3 (Series A)",
+            title: "Scale",
+            items: [
+              "Double down on channels with the best LTV/CAC ratio"
+            ]
+          }].map((phase, idx) => (
+            <div key={idx} className="pitch-card p-10 hover-scale animate-fade-in-up" style={{ animationDelay: `${idx * 0.1}s` }}>
+              <div className="flex items-center gap-5 mb-6">
+                <div className="w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center">
+                  <span className="text-primary-foreground text-2xl font-bold">{idx + 1}</span>
+                </div>
+                <div>
+                  <p className="text-sm text-muted-foreground uppercase tracking-wider">{phase.phase}</p>
+                  <h4 className="text-2xl font-bold text-foreground">{phase.title}</h4>
+                </div>
               </div>
-              <div>
-                <p className="text-xs text-muted-foreground">{phase.phase}</p>
-                <h4 className="font-semibold text-foreground">{phase.title}</h4>
+              <div className="space-y-4 ml-19">
+                {phase.items.map((item, i) => (
+                  <div key={i} className="flex gap-3">
+                    <div className="w-2 h-2 rounded-full bg-primary/60 mt-2 flex-shrink-0" />
+                    <p className="pitch-body text-base text-foreground/70">{item}</p>
+                  </div>
+                ))}
               </div>
             </div>
-            <div className="space-y-2 ml-11">
-              {phase.items.map((item, i) => <div key={i} className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary/60 mt-2 flex-shrink-0" />
-                  <p className="text-sm text-foreground/80">{item}</p>
-                </div>)}
-            </div>
-          </div>)}
+          ))}
+        </div>
       </div>
+    </div>
 }, {
   id: 9,
   title: "Competition",
   subtitle: "Our Moat is Content Quality.",
-  content: <div className="space-y-6">
-        <div className="glass-card p-8">
-          <p className="text-lg text-center text-foreground/90 mb-6">
-            Competitors focus on <span className="text-foreground/50">quantity</span> of user-generated content. 
-            We focus on <span className="text-primary font-semibold">quality</span>.
+  content: <div className="pitch-slide">
+      <div className="max-w-5xl mx-auto space-y-10">
+        <div className="text-center space-y-4 mb-12 animate-fade-in-up">
+          <h2 className="pitch-title text-6xl md:text-7xl gradient-text">Competition</h2>
+          <p className="pitch-subtitle text-2xl md:text-3xl text-muted-foreground">Our Moat is Content Quality.</p>
+        </div>
+        
+        <div className="pitch-card p-12 space-y-8 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+          <p className="pitch-body text-xl text-center text-foreground/80 leading-relaxed">
+            Competitors focus on <span className="text-foreground/40 line-through">quantity</span> of user-generated content. 
+            We focus on <span className="text-primary font-bold">quality</span>.
           </p>
-          <div className="space-y-4">
+          
+          <div className="space-y-5">
             {[{
-          name: "Character.AI",
-          source: "User-Generated",
-          weakness: "Inconsistent quality, shallow"
-        }, {
-          name: "Replika",
-          source: "AI-Generated",
-          weakness: "Generic, outdated tech"
-        }, {
-          name: "Chai",
-          source: "User-Generated",
-          weakness: "Basic features, high churn"
-        }].map((comp, idx) => <div key={idx} className="glass-effect p-4 grid md:grid-cols-3 gap-4">
+              name: "Character.AI",
+              source: "User-Generated",
+              weakness: "Inconsistent quality, shallow"
+            }, {
+              name: "Replika",
+              source: "AI-Generated",
+              weakness: "Generic, outdated tech"
+            }, {
+              name: "Chai",
+              source: "User-Generated",
+              weakness: "Basic features, high churn"
+            }].map((comp, idx) => (
+              <div key={idx} className="glass-effect-strong p-6 rounded-xl grid md:grid-cols-3 gap-6">
                 <div>
-                  <p className="text-xs text-muted-foreground mb-1">Competitor</p>
-                  <p className="font-semibold text-foreground">{comp.name}</p>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Competitor</p>
+                  <p className="text-lg font-bold text-foreground">{comp.name}</p>
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground mb-1">Content Source</p>
-                  <p className="text-sm text-foreground/80">{comp.source}</p>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Content Source</p>
+                  <p className="pitch-body text-base text-foreground/70">{comp.source}</p>
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground mb-1">Key Weakness</p>
-                  <p className="text-sm text-foreground/80">{comp.weakness}</p>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">Key Weakness</p>
+                  <p className="pitch-body text-base text-foreground/70">{comp.weakness}</p>
                 </div>
-              </div>)}
+              </div>
+            ))}
           </div>
         </div>
-        <div className="glass-effect p-6">
-          <h4 className="font-semibold text-primary mb-3">Our Defensible Advantages</h4>
-          <div className="space-y-2">
-            {["Content Moat: Characters crafted by professional screenwriters - IP that cannot be easily replicated", "Execution Speed: Feature-complete platform in 10 months as a small team", "Technical Depth: Integrated system, not just a wrapper around an API"].map((adv, idx) => <div key={idx} className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                <p className="text-sm text-foreground/80">{adv}</p>
-              </div>)}
+        
+        <div className="pitch-accent-card p-10 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+          <h4 className="text-2xl font-bold text-primary mb-6">Our Defensible Advantages</h4>
+          <div className="space-y-4">
+            {[
+              "Content Moat: Characters crafted by professional screenwriters - IP that cannot be easily replicated",
+              "Execution Speed: Feature-complete platform in 10 months as a small team",
+              "Technical Depth: Integrated system, not just a wrapper around an API"
+            ].map((adv, idx) => (
+              <div key={idx} className="flex gap-4">
+                <div className="w-3 h-3 rounded-full bg-primary mt-2 flex-shrink-0" />
+                <p className="pitch-body text-base text-foreground/70">{adv}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
+    </div>
 }, {
   id: 10,
   title: "Team",
   subtitle: "Tech, Growth, and Storytelling.",
-  content: <div className="space-y-6">
-        <div className="glass-card p-8 space-y-6">
-          <div className="space-y-4">
-            <div>
-              <h4 className="text-xl font-bold text-primary mb-1">Daria Dovzhikova</h4>
-              <p className="text-sm text-muted-foreground mb-4">Founder</p>
-              <div className="space-y-3">
-                {[{
-              title: "AI & Product",
-              desc: "Led product for AI and consumer apps; OpenAI, Claude, Hugging Face"
-            }, {
-              title: "Growth",
-              desc: "Grew DAU by 20% at Bitcoin.com; increased conversion 15-30% at Odigos"
-            }, {
-              title: "Tech",
-              desc: "Full-stack (React/Node), proficient in data stack (Mixpanel, SQL)"
-            }].map((exp, idx) => <div key={idx} className="glass-effect p-4">
-                    <p className="text-sm font-semibold text-foreground mb-1">{exp.title}</p>
-                    <p className="text-xs text-muted-foreground">{exp.desc}</p>
-                  </div>)}
+  content: <div className="pitch-slide">
+      <div className="max-w-5xl mx-auto space-y-10">
+        <div className="text-center space-y-4 mb-12 animate-fade-in-up">
+          <h2 className="pitch-title text-6xl md:text-7xl gradient-text">Team</h2>
+          <p className="pitch-subtitle text-2xl md:text-3xl text-muted-foreground">Tech, Growth, and Storytelling.</p>
+        </div>
+        
+        <div className="pitch-card p-12 space-y-12 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+          <div>
+            <div className="flex items-center gap-5 mb-8">
+              <div className="w-20 h-20 rounded-2xl bg-gradient-primary flex items-center justify-center text-4xl">
+                👤
+              </div>
+              <div>
+                <h4 className="text-3xl font-bold text-primary">Daria Dovzhikova</h4>
+                <p className="text-base text-muted-foreground mt-1">Founder</p>
               </div>
             </div>
-            <div className="h-px bg-gradient-primary opacity-20" />
-            <div>
-              <h4 className="text-xl font-bold text-primary mb-1">Nigina Sayfullaeva</h4>
-              <p className="text-sm text-muted-foreground mb-4">Screenwriting Consultant</p>
-              <div className="space-y-2">
-                <div className="glass-effect p-4">
-                  <p className="text-sm font-semibold text-foreground mb-1">Acclaimed Storyteller</p>
-                  <p className="text-xs text-muted-foreground">Award-winning film director and screenwriter</p>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[{
+                title: "AI & Product",
+                desc: "Led product for AI and consumer apps; OpenAI, Claude, Hugging Face"
+              }, {
+                title: "Growth",
+                desc: "Grew DAU by 20% at Bitcoin.com; increased conversion 15-30% at Odigos"
+              }, {
+                title: "Tech",
+                desc: "Full-stack (React/Node), proficient in data stack (Mixpanel, SQL)"
+              }].map((exp, idx) => (
+                <div key={idx} className="glass-effect-strong p-6 rounded-xl">
+                  <p className="text-sm font-bold text-foreground mb-2">{exp.title}</p>
+                  <p className="pitch-body text-xs text-muted-foreground">{exp.desc}</p>
                 </div>
-                <div className="glass-effect p-4">
-                  <p className="text-sm font-semibold text-foreground mb-1">Narrative Expert</p>
-                  <p className="text-xs text-muted-foreground">Advising on character development and interactive storytelling</p>
-                </div>
+              ))}
+            </div>
+          </div>
+          
+          <div className="h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+          
+          <div>
+            <div className="flex items-center gap-5 mb-8">
+              <div className="w-20 h-20 rounded-2xl bg-gradient-primary flex items-center justify-center text-4xl">
+                🎬
               </div>
+              <div>
+                <h4 className="text-3xl font-bold text-primary">Nigina Sayfullaeva</h4>
+                <p className="text-base text-muted-foreground mt-1">Screenwriting Consultant</p>
+              </div>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {[{
+                title: "Acclaimed Storyteller",
+                desc: "Award-winning film director and screenwriter"
+              }, {
+                title: "Narrative Expert",
+                desc: "Advising on character development and interactive storytelling"
+              }].map((exp, idx) => (
+                <div key={idx} className="glass-effect-strong p-6 rounded-xl">
+                  <p className="text-sm font-bold text-foreground mb-2">{exp.title}</p>
+                  <p className="pitch-body text-xs text-muted-foreground">{exp.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
-        <div className="glass-effect p-6 border-l-4 border-primary">
-          <p className="text-sm font-semibold text-primary mb-2">Our advantage</p>
-          <p className="text-sm text-foreground/80">
+        
+        <div className="pitch-accent-card p-10 border-l-4 border-primary animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+          <p className="text-xl font-bold text-primary mb-3">Our advantage</p>
+          <p className="pitch-body text-base text-foreground/70">
             We are the only team combining deep AI/product expertise with professional narrative design.
           </p>
         </div>
       </div>
+    </div>
 }, {
   id: 11,
   title: "The Vision",
   subtitle: "From AI Companions to a Relationship Ecosystem.",
-  content: <div className="space-y-6">
-        {[{
-      period: "Years 1-2",
-      title: "Lead the Premium Companion Market",
-      items: ["Perfect the one-on-one AI companion experience", "Launch a creator marketplace for writers to build and monetize AIs"]
-    }, {
-      period: "Years 3-4",
-      title: "Become an Interactive Storytelling Platform",
-      items: ['Launch multi-character group conversations ("Dream Room")', "Introduce real-time voice and video calls", "Partner with studios to license famous characters"]
-    }, {
-      period: "Year 5+",
-      title: "Become the Relationship Layer API",
-      items: ["License our personality engine to gaming, mental health, and education companies", "Allow developers to integrate our AIs into their own apps"]
-    }].map((vision, idx) => <div key={idx} className="glass-card p-6 hover-scale animate-fade-in" style={{
-      animationDelay: `${idx * 0.1}s`
-    }}>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-gradient-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold">{idx + 1}</span>
+  content: <div className="pitch-slide">
+      <div className="max-w-5xl mx-auto space-y-10">
+        <div className="text-center space-y-4 mb-12 animate-fade-in-up">
+          <h2 className="pitch-title text-6xl md:text-7xl gradient-text">The Vision</h2>
+          <p className="pitch-subtitle text-2xl md:text-3xl text-muted-foreground">From AI Companions to a Relationship Ecosystem.</p>
+        </div>
+        
+        <div className="space-y-6">
+          {[{
+            period: "Years 1-2",
+            title: "Lead the Premium Companion Market",
+            items: [
+              "Perfect the one-on-one AI companion experience",
+              "Launch a creator marketplace for writers to build and monetize AIs"
+            ]
+          }, {
+            period: "Years 3-4",
+            title: "Become an Interactive Storytelling Platform",
+            items: [
+              'Launch multi-character group conversations ("Dream Room")',
+              "Introduce real-time voice and video calls",
+              "Partner with studios to license famous characters"
+            ]
+          }, {
+            period: "Year 5+",
+            title: "Become the Relationship Layer API",
+            items: [
+              "License our personality engine to gaming, mental health, and education companies",
+              "Allow developers to integrate our AIs into their own apps"
+            ]
+          }].map((vision, idx) => (
+            <div key={idx} className="pitch-card p-10 hover-scale animate-fade-in-up" style={{ animationDelay: `${idx * 0.1}s` }}>
+              <div className="flex items-center gap-5 mb-6">
+                <div className="w-16 h-16 rounded-xl bg-gradient-primary flex items-center justify-center">
+                  <span className="text-primary-foreground text-2xl font-bold">{idx + 1}</span>
+                </div>
+                <div>
+                  <p className="text-sm text-muted-foreground uppercase tracking-wider">{vision.period}</p>
+                  <h4 className="text-2xl font-bold text-foreground">{vision.title}</h4>
+                </div>
               </div>
-              <div>
-                <p className="text-xs text-muted-foreground">{vision.period}</p>
-                <h4 className="font-semibold text-foreground">{vision.title}</h4>
+              <div className="space-y-4 ml-21">
+                {vision.items.map((item, i) => (
+                  <div key={i} className="flex gap-3">
+                    <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    <p className="pitch-body text-base text-foreground/70">{item}</p>
+                  </div>
+                ))}
               </div>
             </div>
-            <div className="space-y-2 ml-13">
-              {vision.items.map((item, i) => <div key={i} className="flex items-start gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <p className="text-sm text-foreground/80">{item}</p>
-                </div>)}
-            </div>
-          </div>)}
+          ))}
+        </div>
       </div>
+    </div>
 }, {
   id: 12,
   title: "The Plan",
   subtitle: "The 18-Month Roadmap to Seed.",
-  content: <div className="space-y-6">
-        <div className="glass-card p-8">
-          <p className="text-lg text-center text-foreground/90 mb-8">
-            Use this pre-seed round to get <span className="text-primary font-semibold">seed-round ready</span>.
+  content: <div className="pitch-slide">
+      <div className="max-w-5xl mx-auto space-y-10">
+        <div className="text-center space-y-4 mb-12 animate-fade-in-up">
+          <h2 className="pitch-title text-6xl md:text-7xl gradient-text">The Plan</h2>
+          <p className="pitch-subtitle text-2xl md:text-3xl text-muted-foreground">The 18-Month Roadmap to Seed.</p>
+        </div>
+        
+        <div className="pitch-card p-12 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+          <p className="pitch-body text-2xl text-center text-foreground/80 mb-12 leading-relaxed">
+            Use this pre-seed round to get <span className="text-primary font-bold">seed-round ready</span>.
           </p>
-          <div className="space-y-4">
+          
+          <div className="space-y-6">
             {[{
-          phase: "Phase 1 (Months 1-6)",
-          focus: "Find repeatable acquisition channels, optimize retention",
-          hire: "Founding Engineer"
-        }, {
-          phase: "Phase 2 (Months 7-12)",
-          focus: "Double down on the 1-2 best-performing channels",
-          hire: "Community Lead"
-        }, {
-          phase: "Phase 3 (Months 13-18)",
-          focus: "With proven metrics, raise a $2-3M seed round to scale",
-          hire: null
-        }].map((phase, idx) => <div key={idx} className="glass-effect p-6 hover-scale animate-fade-in" style={{
-          animationDelay: `${idx * 0.1}s`
-        }}>
-                <h4 className="font-semibold text-primary mb-3">{phase.phase}</h4>
-                <div className="space-y-2">
-                  <p className="text-sm text-foreground/80">
-                    <span className="font-semibold">Focus:</span> {phase.focus}
+              phase: "Phase 1 (Months 1-6)",
+              focus: "Find repeatable acquisition channels, optimize retention",
+              hire: "Founding Engineer"
+            }, {
+              phase: "Phase 2 (Months 7-12)",
+              focus: "Double down on the 1-2 best-performing channels",
+              hire: "Community Lead"
+            }, {
+              phase: "Phase 3 (Months 13-18)",
+              focus: "With proven metrics, raise a $2-3M seed round to scale",
+              hire: null
+            }].map((phase, idx) => (
+              <div key={idx} className="glass-effect-strong p-8 rounded-xl hover-scale">
+                <h4 className="text-xl font-bold text-primary mb-4">{phase.phase}</h4>
+                <div className="space-y-3">
+                  <p className="pitch-body text-base text-foreground/70">
+                    <span className="font-semibold text-foreground">Focus:</span> {phase.focus}
                   </p>
-                  {phase.hire && <p className="text-sm text-foreground/80">
-                      <span className="font-semibold">Hire:</span> {phase.hire}
-                    </p>}
+                  {phase.hire && (
+                    <p className="pitch-body text-base text-foreground/70">
+                      <span className="font-semibold text-foreground">Hire:</span> {phase.hire}
+                    </p>
+                  )}
                 </div>
-              </div>)}
+              </div>
+            ))}
           </div>
         </div>
       </div>
+    </div>
 }, {
   id: 13,
   title: "The Ask",
   subtitle: "$500k Pre-Seed.",
-  content: <div className="space-y-6">
-        <div className="glass-card p-8 text-center">
-          <h3 className="text-5xl font-bold gradient-text mb-4">$500k Pre-Seed</h3>
-          <p className="text-xl text-foreground/90 mb-8">
-            To find a repeatable growth engine and scale the team.
-          </p>
-          <div className="space-y-4 text-left max-w-2xl mx-auto">
-            <h4 className="font-semibold text-primary">Use of Funds (18-Month Runway)</h4>
+  content: <div className="pitch-slide">
+      <div className="max-w-5xl mx-auto space-y-10">
+        <div className="text-center space-y-4 mb-12 animate-fade-in-up">
+          <h2 className="pitch-title text-6xl md:text-7xl gradient-text">The Ask</h2>
+          <p className="pitch-subtitle text-2xl md:text-3xl text-muted-foreground">$500k Pre-Seed.</p>
+        </div>
+        
+        <div className="pitch-card p-12 text-center space-y-10 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+          <div>
+            <h3 className="pitch-stat-number text-7xl mb-6">$500k Pre-Seed</h3>
+            <p className="pitch-body text-2xl text-foreground/80">
+              To find a repeatable growth engine and scale the team.
+            </p>
+          </div>
+          
+          <div className="space-y-6 text-left max-w-3xl mx-auto">
+            <h4 className="text-2xl font-bold text-primary">Use of Funds (18-Month Runway)</h4>
             {[{
-          pct: "50%",
-          label: "Team",
-          desc: "Founder salaries & one key engineering hire"
-        }, {
-          pct: "30%",
-          label: "Infrastructure",
-          desc: "API usage and server costs"
-        }, {
-          pct: "20%",
-          label: "GTM Experiments",
-          desc: "Test paid channels to find profitable unit economics"
-        }].map((item, idx) => <div key={idx} className="glass-effect p-4 flex items-center gap-4">
-                <div className="text-3xl font-bold text-primary w-16">{item.pct}</div>
+              pct: "50%",
+              label: "Team",
+              desc: "Founder salaries & one key engineering hire"
+            }, {
+              pct: "30%",
+              label: "Infrastructure",
+              desc: "API usage and server costs"
+            }, {
+              pct: "20%",
+              label: "GTM Experiments",
+              desc: "Test paid channels to find profitable unit economics"
+            }].map((item, idx) => (
+              <div key={idx} className="glass-effect-strong p-6 rounded-xl flex items-center gap-6">
+                <div className="pitch-stat-number text-5xl w-24 text-center flex-shrink-0">{item.pct}</div>
                 <div>
-                  <p className="font-semibold text-foreground">{item.label}</p>
-                  <p className="text-sm text-muted-foreground">{item.desc}</p>
+                  <p className="text-xl font-bold text-foreground mb-1">{item.label}</p>
+                  <p className="pitch-body text-sm text-muted-foreground">{item.desc}</p>
                 </div>
-              </div>)}
+              </div>
+            ))}
           </div>
         </div>
-        <div className="glass-effect p-6 text-center space-y-4">
-          <h4 className="font-semibold text-primary">Contact</h4>
+        
+        <div className="pitch-accent-card p-10 text-center space-y-6 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+          <h4 className="text-2xl font-bold text-primary">Contact</h4>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button variant="default" size="lg" className="gap-2">
-              <Mail className="w-4 h-4" />
+            <Button variant="default" size="lg" className="gap-2 text-lg px-8 py-6">
+              <Mail className="w-5 h-5" />
               dovzhikova@gmail.com
             </Button>
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="outline" size="lg" className="text-lg px-8 py-6" asChild>
               <a href="http://privia-production.up.railway.app" target="_blank" rel="noopener noreferrer">
                 privia-production.up.railway.app
               </a>
@@ -555,15 +732,20 @@ const slides = [{
           </div>
         </div>
       </div>
+    </div>
 }];
+
 const Pitch = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  
   const nextSlide = () => {
     setCurrentSlide(prev => (prev + 1) % slides.length);
   };
+  
   const prevSlide = () => {
     setCurrentSlide(prev => (prev - 1 + slides.length) % slides.length);
   };
+
   const handleExportPDF = () => {
     window.print();
   };
@@ -577,14 +759,17 @@ const Pitch = () => {
       toast.error("Failed to export presentation. Please try again.");
     }
   };
+  
   const slide = slides[currentSlide];
-  return <div className="min-h-screen bg-background flex flex-col">
+  
+  return (
+    <div className="min-h-screen bg-gradient-hero flex flex-col">
       {/* Header */}
-      <header className="glass-card border-b sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <h1 className="text-xl font-bold gradient-text">PriviaAI Pitch Deck</h1>
-            <span className="text-sm text-muted-foreground">
+      <header className="glass-card border-b sticky top-0 z-50 backdrop-blur-xl">
+        <div className="container mx-auto px-6 py-5 flex items-center justify-between">
+          <div className="flex items-center gap-6">
+            <h1 className="text-2xl font-bold gradient-text">PriviaAI Pitch Deck</h1>
+            <span className="text-sm text-muted-foreground font-medium">
               Slide {currentSlide + 1} of {slides.length}
             </span>
           </div>
@@ -596,7 +781,7 @@ const Pitch = () => {
                   Export
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
+              <DropdownMenuContent align="end" className="w-56">
                 <DropdownMenuItem onClick={handleExportPPTX}>
                   <Download className="w-4 h-4 mr-2" />
                   Export as PowerPoint (.pptx)
@@ -612,40 +797,58 @@ const Pitch = () => {
       </header>
 
       {/* Slide Content */}
-      <main className="flex-1 container mx-auto px-4 py-12 flex flex-col">
-        <div className="mb-8 text-center animate-fade-in">
-          
-          
-        </div>
-
-        <div className="flex-1 max-w-5xl mx-auto w-full animate-fade-in" style={{
-        animationDelay: "0.1s"
-      }}>
+      <main className="flex-1 flex items-center justify-center px-4 py-8">
+        <div className="w-full max-w-7xl">
           {slide.content}
         </div>
       </main>
 
       {/* Navigation */}
-      <footer className="glass-card border-t">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex items-center justify-between max-w-4xl mx-auto">
-            <Button variant="outline" size="lg" onClick={prevSlide} disabled={currentSlide === 0} className="gap-2">
-              <ChevronLeft className="w-4 h-4" />
+      <footer className="glass-card border-t backdrop-blur-xl">
+        <div className="container mx-auto px-6 py-6">
+          <div className="flex items-center justify-between max-w-5xl mx-auto">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              onClick={prevSlide} 
+              disabled={currentSlide === 0} 
+              className="gap-2 px-8"
+            >
+              <ChevronLeft className="w-5 h-5" />
               Previous
             </Button>
 
             {/* Slide Indicators */}
             <div className="flex gap-2">
-              {slides.map((_, idx) => <button key={idx} onClick={() => setCurrentSlide(idx)} className={`w-2 h-2 rounded-full transition-all ${idx === currentSlide ? "bg-primary w-8" : "bg-muted-foreground/30 hover:bg-muted-foreground/50"}`} aria-label={`Go to slide ${idx + 1}`} />)}
+              {slides.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setCurrentSlide(idx)}
+                  className={`rounded-full transition-all ${
+                    idx === currentSlide 
+                      ? "bg-primary w-10 h-2.5" 
+                      : "bg-muted-foreground/30 hover:bg-muted-foreground/50 w-2.5 h-2.5"
+                  }`}
+                  aria-label={`Go to slide ${idx + 1}`}
+                />
+              ))}
             </div>
 
-            <Button variant="default" size="lg" onClick={nextSlide} disabled={currentSlide === slides.length - 1} className="gap-2">
+            <Button 
+              variant="default" 
+              size="lg" 
+              onClick={nextSlide} 
+              disabled={currentSlide === slides.length - 1} 
+              className="gap-2 px-8"
+            >
               Next
-              <ChevronRight className="w-4 h-4" />
+              <ChevronRight className="w-5 h-5" />
             </Button>
           </div>
         </div>
       </footer>
-    </div>;
+    </div>
+  );
 };
+
 export default Pitch;
