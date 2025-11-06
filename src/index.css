@@ -215,25 +215,33 @@ All colors MUST be HSL.
     
     body {
       background: white !important;
+      color: #1a1a1a !important;
     }
     
-    header, footer, .no-print {
+    header, footer {
       display: none !important;
     }
     
     .glass-card, .glass-effect, .glass-effect-subtle, .glass-effect-strong {
-      background: white !important;
+      background: #f8f9fa !important;
       backdrop-filter: none !important;
       border: 1px solid #e0e0e0 !important;
+      page-break-inside: avoid;
     }
     
     .gradient-text {
-      -webkit-text-fill-color: #e11d48 !important;
-      background: none !important;
+      background: linear-gradient(135deg, #e11d48 0%, #f97316 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
     }
     
-    * {
-      color: #000 !important;
+    main {
+      color: #1a1a1a !important;
+    }
+    
+    h1, h2, h3, h4, h5, h6, p, span, div {
+      color: inherit !important;
     }
     
     .text-muted-foreground {
@@ -242,6 +250,18 @@ All colors MUST be HSL.
     
     .text-primary {
       color: #e11d48 !important;
+    }
+    
+    .text-foreground {
+      color: #1a1a1a !important;
+    }
+    
+    .bg-primary {
+      background-color: #e11d48 !important;
+    }
+    
+    button {
+      border: 1px solid #e0e0e0 !important;
     }
   }
 }
