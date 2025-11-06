@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Companions from "./pages/Companions";
 import Chat from "./pages/Chat";
+import Pitch from "./pages/Pitch";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,6 +21,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/companions" element={<Companions />} />
           <Route path="/chat/:id" element={<Chat />} />
+          <Route path="/pitch" element={<Pitch />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
