@@ -55,7 +55,7 @@ const slides = [{
         <div className="text-center text-sm text-muted-foreground animate-fade-in" style={{
       animationDelay: "0.5s"
     }}>
-          Version 6.0 • {new Date().getFullYear()}
+          November, 2025
         </div>
       </div>
 }, {
