@@ -258,12 +258,12 @@ const slides = [{
 }, {
   id: 6,
   title: "Progress",
-  subtitle: "From Idea to Live Product in 10 Months.",
+  subtitle: "From Idea to Live Product in 2 Months.",
   content: <div className="pitch-slide">
       <div className="max-w-5xl mx-auto space-y-10">
         <div className="text-center space-y-4 mb-12 animate-fade-in-up">
           <h2 className="pitch-title text-6xl md:text-7xl gradient-text">Progress</h2>
-          <p className="pitch-subtitle text-2xl md:text-3xl text-muted-foreground">From Idea to Live Product in 10 Months.</p>
+          <p className="pitch-subtitle text-2xl md:text-3xl text-muted-foreground">From Idea to Live Product in 2 Months.</p>
         </div>
         
         <div className="pitch-card p-12 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
@@ -274,7 +274,7 @@ const slides = [{
           <div className="grid md:grid-cols-2 gap-6">
             {[{
               title: "Launched MVP",
-              detail: "January 2025"
+              detail: "October 2025"
             }, {
               title: "Shipped 10+ Major Features",
               detail: "Voice, images, vector memory"
