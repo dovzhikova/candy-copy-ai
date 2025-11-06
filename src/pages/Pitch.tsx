@@ -596,6 +596,10 @@ const Pitch = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
+  const handleExport = () => {
+    window.print();
+  };
+
   const slide = slides[currentSlide];
 
   return (
@@ -610,7 +614,7 @@ const Pitch = () => {
             </span>
           </div>
           <div className="flex items-center gap-2">
-            <Button variant="ghost" size="sm" className="gap-2">
+            <Button variant="ghost" size="sm" className="gap-2" onClick={handleExport}>
               <Download className="w-4 h-4" />
               Export
             </Button>

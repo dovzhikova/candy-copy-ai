@@ -205,4 +205,43 @@ All colors MUST be HSL.
   .animate-subtle-pulse {
     animation: subtle-pulse 3s ease-in-out infinite;
   }
+  
+  /* Print styles for pitch deck export */
+  @media print {
+    @page {
+      size: landscape;
+      margin: 0.5in;
+    }
+    
+    body {
+      background: white !important;
+    }
+    
+    header, footer, .no-print {
+      display: none !important;
+    }
+    
+    .glass-card, .glass-effect, .glass-effect-subtle, .glass-effect-strong {
+      background: white !important;
+      backdrop-filter: none !important;
+      border: 1px solid #e0e0e0 !important;
+    }
+    
+    .gradient-text {
+      -webkit-text-fill-color: #e11d48 !important;
+      background: none !important;
+    }
+    
+    * {
+      color: #000 !important;
+    }
+    
+    .text-muted-foreground {
+      color: #666 !important;
+    }
+    
+    .text-primary {
+      color: #e11d48 !important;
+    }
+  }
 }
