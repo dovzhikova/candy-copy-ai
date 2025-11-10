@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Companions from "./pages/Companions";
 import Chat from "./pages/Chat";
 import Pitch from "./pages/Pitch";
+import Assets from "./pages/Assets";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/companions" element={<Companions />} />
           <Route path="/chat/:id" element={<Chat />} />
           <Route path="/pitch" element={<Pitch />} />
+          <Route path="/assets" element={<Assets />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
