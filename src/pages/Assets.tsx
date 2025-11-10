@@ -7,6 +7,12 @@ import characterSelectionGrid from "@/assets/character-selection-grid.png";
 import chatInterfaceDetail from "@/assets/chat-interface-detail.png";
 import memoryTimeline from "@/assets/memory-timeline.png";
 import generatedImageExample from "@/assets/generated-image-example.png";
+import priviaChatInterface from "@/assets/privia-chat-interface.png";
+import priviaCharactersGrid from "@/assets/privia-characters-grid.png";
+import priviaMobileMockup from "@/assets/privia-mobile-mockup.png";
+import priviaMemoryTimeline from "@/assets/privia-memory-timeline.png";
+import priviaDesktopApp from "@/assets/privia-desktop-app.png";
+import priviaHeroBanner from "@/assets/privia-hero-banner.png";
 
 interface Asset {
   id: string;
@@ -17,6 +23,48 @@ interface Asset {
 }
 
 const assets: Asset[] = [
+  {
+    id: "privia-hero-banner",
+    title: "Hero Banner - AI That Remembers",
+    description: "Premium marketing banner with dark gradient and floating phone mockup",
+    image: priviaHeroBanner,
+    category: "banner",
+  },
+  {
+    id: "privia-chat-interface",
+    title: "Chat Interface - Professional Mockup",
+    description: "Dark mode chat UI with Elena character and memory pinning feature",
+    image: priviaChatInterface,
+    category: "mockup",
+  },
+  {
+    id: "privia-characters-grid",
+    title: "Character Selection Grid",
+    description: "Professional portrait grid with diverse AI companions",
+    image: priviaCharactersGrid,
+    category: "screenshot",
+  },
+  {
+    id: "privia-mobile-mockup",
+    title: "Mobile App Mockup",
+    description: "iPhone mockup with PriviaAI chat interface and coral accents",
+    image: priviaMobileMockup,
+    category: "mockup",
+  },
+  {
+    id: "privia-desktop-app",
+    title: "Desktop Application Screenshot",
+    description: "Full desktop interface with sidebar, chat, and memory panel",
+    image: priviaDesktopApp,
+    category: "screenshot",
+  },
+  {
+    id: "privia-memory-timeline",
+    title: "Memory Timeline Interface",
+    description: "Relationship milestones visualization with coral pink accents",
+    image: priviaMemoryTimeline,
+    category: "screenshot",
+  },
   {
     id: "hero-chat",
     title: "Chat Interface Mockup",
