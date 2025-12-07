@@ -223,11 +223,24 @@ All colors MUST be HSL.
   
   /* Pitch deck specific styles */
   .pitch-slide {
-    min-height: 100vh;
+    min-height: calc(100vh - 8rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 4rem 2rem;
+    padding: 1.5rem 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .pitch-slide {
+      padding: 2rem 1.5rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .pitch-slide {
+      min-height: 100vh;
+      padding: 4rem 2rem;
+    }
   }
   
   .pitch-title {
@@ -254,8 +267,14 @@ All colors MUST be HSL.
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
     backdrop-filter: blur(100px);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 1.5rem;
+    border-radius: 1rem;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  @media (min-width: 768px) {
+    .pitch-card {
+      border-radius: 1.5rem;
+    }
   }
   
   .pitch-card:hover {
@@ -264,11 +283,23 @@ All colors MUST be HSL.
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(244, 63, 94, 0.15);
   }
   
+  @media (max-width: 767px) {
+    .pitch-card:hover {
+      transform: none;
+    }
+  }
+  
   .pitch-accent-card {
     background: linear-gradient(135deg, rgba(244, 63, 94, 0.08) 0%, rgba(251, 146, 60, 0.05) 100%);
     backdrop-filter: blur(80px);
     border: 1px solid rgba(244, 63, 94, 0.2);
-    border-radius: 1rem;
+    border-radius: 0.75rem;
+  }
+  
+  @media (min-width: 768px) {
+    .pitch-accent-card {
+      border-radius: 1rem;
+    }
   }
   
   .pitch-stat-number {
@@ -284,8 +315,10 @@ All colors MUST be HSL.
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
-  .hover-scale:hover {
-    transform: scale(1.02);
+  @media (min-width: 768px) {
+    .hover-scale:hover {
+      transform: scale(1.02);
+    }
   }
 
   /* Print styles for pitch deck export */
